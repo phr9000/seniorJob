@@ -1,0 +1,189 @@
+@import "/src/assets/styles/abstracts/variables.scss";
+
+@mixin font($size, $weight, $color, $height: 1) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  line-height: $height;
+}
+
+// 말줄임표
+@mixin ellipsis($line) {
+  @if $line == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+}
+
+@mixin flex($direction: row, $justify: flex-start, $align: flex-start) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  // flex //
+  @if $direction==row {
+    -webkit-box-orient: horizontal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  } @else if $direction==row-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  } @else if $direction==column {
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  } @else if $direction==column-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  // justify-content //
+  @if $justify==flex-start {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  } @else if $justify==flex-end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  } @else if $justify==center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  } @else if $justify==space-between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  // align-items //
+  @if $align==flex-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  } @else if $align==flex-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  } @else if $align==center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  } @else if $align==stretch {
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  } @else if $align==baseline {
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  }
+}
+
+@mixin flex-grow($grow) {
+  -webkit-box-flex: $grow;
+  -ms-flex: $grow;
+  flex-grow: $grow;
+}
+
+// 포지션
+@mixin posi($x, $y) {
+  position: absolute;
+  left: $x;
+  top: $y;
+
+  @if $x == 50% and $y == 50% {
+    transform: translate(-50%, -50%);
+  } @else if $x == 50% {
+    transform: translateX(-50%);
+  } @else if $y == 50% {
+    transform: translateY(-50%);
+  }
+}
+
+// 말줄임표
+@mixin ellipsis($line) {
+  @if $line == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+}
+
+// set ir
+@mixin ir {
+  text-indent: -9999px;
+  display: block;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  left: -9999px;
+  white-space: nowrap;
+  font-size: 1px;
+  transform: translateX(-100px) scale(0.0001);
+  z-index: -1;
+}
+// reset ir
+@mixin no-ir {
+  text-indent: 0;
+  display: inherit;
+  border: 0;
+  clip: unset;
+  clip-path: none;
+  width: inherit;
+  height: inherit;
+  margin: inherit;
+  padding: inherit;
+  overflow: unset;
+  padding: inherit;
+  position: static;
+  left: unset;
+  white-space: unset;
+  font-size: inherit;
+  transform: none;
+  z-index: unset;
+}
+
+// beautiful-scroll
+@mixin beautiful-scroll {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 18px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+}
