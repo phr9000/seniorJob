@@ -25,6 +25,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "https://230815.netlify.app/",
   "eslintConfig": {
     "extends": [
       "react-app",
