@@ -4,8 +4,10 @@ const MainLayout: React.FC = () => {
   return (
     <main>
       <>
-        <div>test111</div>
-        <div>new add text test !!!!!!! </div>
+        <div className="flex items-center">
+          <div>test</div>
+          <div>new add text test !!!!!!! </div>
+        </div>
       </>
     </main>
   );
