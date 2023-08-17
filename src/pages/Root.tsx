@@ -9,8 +9,6 @@ const Root: React.FC = () => {
     <div>
       {/*<Header />*/}
       <div>
-
-
         <Outlet/>
       </div>
     </div>
