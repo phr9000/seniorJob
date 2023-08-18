@@ -1,6 +1,10 @@
 /* eslint-disable */
 import React from "react";
 
+
+/* Import imgs */
+import imgs from '../common/ImgDef';
+
 const LatestList: React.FC = () => {
   return (
 
@@ -10,7 +14,7 @@ const LatestList: React.FC = () => {
         <div className="sec_list">
           <a href="#" className="add_links">
             <div className="thumb_area">
-
+              <img src={imgs.thumb_01} alt=""/>
             </div>
             <div className="text_area">
 
