@@ -2,10 +2,17 @@
 import {Link} from "react-router-dom";
 import React from "react";
 
+interface SecTitleProps {
+  title?: string; // 제목은 문자열로만 정의함
+  /**
+   * 문자열 또는 숫자 모두 가능하도록 하고 싶을때, 유니온 타입 사용
+   * title?: string | number; 로 작성.
+   * */
+}
 
-export function SecTitle() {
+export function SecTitle({title = "섹션제목"}: SecTitleProps) {
   return (
-    <h2 className="sec_title">Latest Jobs</h2>
+    <h2 className="sec_title">{title}</h2>
   );
 }
 
