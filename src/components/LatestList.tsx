@@ -5,6 +5,8 @@ import React from "react";
 /* Import imgs */
 import imgs from 'src/common/ImgDef';
 
+/* Import SCSS */
+import "src/components/latestList.scss";
 
 /* Import Component */
 import {SecTitle} from 'src/components/Guide';
@@ -16,12 +18,47 @@ const LatestList: React.FC = () => {
       <div className="section_inner">
         <SecTitle title="Latest Jobs"/>
         <div className="sec_list">
-          <a href="#" className="add_links">
-            <div className="thumb_area">
+          <a href="#" className="add_links flex">
+            <div className="thumb_area shrink-0">
               <img src={imgs.thumb_01} alt=""/>
             </div>
             <div className="text_area">
-              <i className="fas fa-pencil-alt"></i>
+              <div className="row flex justify-between">
+                <span className="posted_on">
+                  <i className="fas fa-pencil-alt"></i>
+                  &nbsp;&nbsp;Posted on 26 Aug 2023
+                </span>
+                <p className="jobtype_part">
+                  <i className="far fa-clock"></i>
+                  &nbsp;&nbsp;Part Time
+                </p>
+              </div>
+              <div className="row course_desc">
+                <h3 className="job_tit">Fashion Retail Assistant (Part-Time)</h3>
+                <div className="job_desc">
+                  <ul className="flex align-center">
+                    <li>
+                      <span className="txt">
+                        <i className="fas fa-building"></i>
+                        &nbsp;&nbsp;CENTRE FOR SENIORS
+                      </span>
+                    </li>
+                    <li>
+                      <span className="txt">
+                        <i className="fas fa-map-marker-alt"></i>
+                        &nbsp;&nbsp;Dakota - CC8
+                      </span>
+                    </li>
+                    <li>
+                      <span className="txt">
+                        <i className="fas fa-calendar-alt"></i>
+                        &nbsp;&nbsp;Shifts
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
             </div>
           </a>
         </div>

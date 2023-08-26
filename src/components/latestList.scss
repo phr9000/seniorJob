@@ -1,0 +1,72 @@
+.sec_list {
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+
+  .add_links {
+    .thumb_area {
+      width: 160px;
+      height: 160px;
+      padding: 0 15px;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .text_area {
+      width: 100%;
+
+      .posted_on {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #777;
+
+        .fas {
+          display: inline-block;
+        }
+      }
+
+      .jobtype_part {
+        max-width: 100%;
+        width: 148px;
+        height: 34px;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 25px;
+        padding: 5px 8px;
+        text-align: center;
+        border: 1px solid #ffd2b2;
+        background-color: #ffd2b2;
+        color: #a74500;
+      }
+
+      .course_desc {
+        .job_tit {
+          font-size: 20px;
+          font-weight: 600;
+          margin: 5px 0;
+          color: #3428c9;
+          word-wrap: break-word;
+        }
+
+        .job_desc {
+          ul {
+            li {
+              display: inline;
+              border-right: 1px solid #cccccc;
+              padding: 0 10px;
+              color: #333;
+
+              span.txt {
+                font-size: 16px;
+                color: #333;
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
