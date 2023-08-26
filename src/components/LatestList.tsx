@@ -21,7 +21,7 @@ const LatestList: React.FC = () => {
               <img src={imgs.thumb_01} alt=""/>
             </div>
             <div className="text_area">
-              test
+              <i className="fas fa-pencil-alt"></i>
             </div>
           </a>
         </div>
