@@ -1,3 +1,7 @@
+@import "src/assets/styles/abstracts/mixin.scss";
+@import "src/assets/styles/abstracts/variables.scss";
+
+
 .sec_list {
   padding: 1.5rem;
   border-bottom: 1px solid #ccc;
@@ -43,6 +47,14 @@
         &:not(:last-child) {
           margin-right: 1rem;
         }
+
+        @include mobile {
+          margin-bottom: 1rem;
+        }
+        
+        @include tablet {
+          margin-bottom: 1rem;
+        }
       }
 
       .jobtype_pull {
@@ -58,13 +70,15 @@
           font-size: 2rem;
           font-weight: 600;
           margin: 5px 0;
-          color: #3428c9;
+          color: $primary;
           word-wrap: break-word;
           line-height: 1.1;
         }
 
         .job_desc {
           ul {
+            margin-bottom: 20px;
+
             li {
               display: inline;
               color: #333;
