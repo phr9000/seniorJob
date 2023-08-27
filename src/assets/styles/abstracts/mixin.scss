@@ -2,9 +2,10 @@
 
 
 // 반응형
-$mobile-width: 360px;
-$tablet-width: 1024px;
-$desktop-width: 1280px;
+$mobile-width: 320px;
+$tablet-width: 768px;
+$tablet-m-width: 990px;
+$desktop-width: 1200px;
 
 
 @mixin mobile {
@@ -14,7 +15,13 @@ $desktop-width: 1280px;
 }
 
 @mixin tablet {
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$tablet-m-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet_m {
+  @media (min-width: #{$tablet-m-width}) and (max-width: #{$desktop-width - 1px}) {
     @content;
   }
 }
