@@ -28,14 +28,20 @@ const LatestList: React.FC = () => {
                   <i className="fas fa-pencil-alt"></i>
                   &nbsp;&nbsp;Posted on 26 Aug 2023
                 </span>
-                <p className="jobtype_part">
-                  <i className="far fa-clock"></i>
-                  &nbsp;&nbsp;Part Time
-                </p>
+                <div className="row flex items-center">
+                  <p className="jobtype_part">
+                    <i className="far fa-clock"></i>
+                    &nbsp;&nbsp;Part Time
+                  </p>
+                  <p className="jobtype_pull">
+                    <i className="far fa-clock"></i>
+                    &nbsp;&nbsp;Full Time
+                  </p>
+                </div>
               </div>
               <div className="row course_desc">
                 <h3 className="job_tit">Fashion Retail Assistant (Part-Time)</h3>
-                <div className="job_desc">
+                <div className="job_desc flex justify-between">
                   <ul className="flex align-center">
                     <li>
                       <span className="txt">
@@ -56,9 +62,15 @@ const LatestList: React.FC = () => {
                       </span>
                     </li>
                   </ul>
+                  <div className="row">
+                    <div className="salary">
+                      UP TO
+                      <span className="data_salary">$3500</span>
+                    </div>
+                    <div className="salperiod">per month</div>
+                  </div>
                 </div>
               </div>
-
             </div>
           </a>
         </div>
