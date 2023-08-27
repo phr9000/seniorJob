@@ -122,6 +122,10 @@
               flex-direction: column;
               align-items: flex-start;
             }
+            @include mobile {
+              flex-direction: column;
+              align-items: flex-start;
+            }
 
             li {
               display: inline;
@@ -146,6 +150,9 @@
                 @include tablet {
                   padding-left: 0;
                 }
+                @include mobile {
+                  padding-left: 0;
+                }
               }
             }
           }
@@ -163,6 +170,9 @@
                 display: block;
               }
               @include tablet {
+                display: block;
+              }
+              @include mobile {
                 display: block;
               }
             }
