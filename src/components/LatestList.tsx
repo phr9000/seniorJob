@@ -1,7 +1,6 @@
 /* eslint-disable */
 import React from "react";
 
-
 /* Import imgs */
 import imgs from 'src/common/ImgDef';
 
@@ -10,6 +9,7 @@ import "src/components/latestList.scss";
 
 /* Import Component */
 import {SecTitle} from 'src/components/Guide';
+import {BigBtn} from 'src/components/Guide';
 
 const LatestList: React.FC = () => {
   return (
@@ -74,9 +74,9 @@ const LatestList: React.FC = () => {
             </div>
           </a>
         </div>
+        <BigBtn/>
       </div>
     </section>
-
   );
 };
 export default LatestList;
