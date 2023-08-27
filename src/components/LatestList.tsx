@@ -74,7 +74,7 @@ const LatestList: React.FC = () => {
             </div>
           </a>
         </div>
-        <BigBtn/>
+        <BigBtn title="View All Jobs"/>
       </div>
     </section>
   );

@@ -3,23 +3,36 @@
 * {
   font-family: "Lato", sans-serif;
 }
+
 html,
 body {
   font-size: 10px;
   letter-spacing: -0.5px;
   font-family: "Lato", sans-serif;
 }
+
 body {
   &.no-scroll {
     overflow: hidden;
   }
 }
+
+.container {
+  margin: 0 auto;
+}
+
+section {
+  padding: 0 15px;
+}
+
 a {
   color: inherit;
 }
+
 em {
   font-style: normal;
 }
+
 .ir {
   text-indent: -9999px;
   display: block !important;
@@ -39,36 +52,47 @@ em {
   transform: translateX(-100px) scale(0.0001);
   z-index: -1;
 }
+
 .hidden {
   display: none !important;
 }
+
 .bold {
   font-weight: bold !important;
 }
+
 .display-block {
   display: block;
 }
+
 .display-inblock {
   display: inline-block;
 }
+
 .flex {
   display: flex;
 }
+
 .align-center {
   align-items: center;
 }
+
 .justify-between {
   justify-content: space-between;
 }
+
 .justify-center {
   justify-content: center;
 }
+
 .wrap {
   flex-wrap: wrap;
 }
+
 .w100 {
   width: 100%;
 }
+
 .ir {
   overflow: hidden;
   text-indent: -9999px;
@@ -77,6 +101,7 @@ em {
 .ellipsis-one {
   @include ellipsis(1);
 }
+
 .ellipsis-two {
   @include ellipsis(2);
 }

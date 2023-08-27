@@ -24,7 +24,7 @@ export function SecTitle({title = "섹션제목"}: SecTitleProps) {
 export function BigBtn({title = " View All Jobs"}: BigBtnTitleProps) {
   return (
     <div className="big_btn">
-      <a href="#none">
+      <a href="#none" title="페이지이동">
         {title}&nbsp;&nbsp;
         <i className="fas fa-arrow-right"></i>
       </a>
