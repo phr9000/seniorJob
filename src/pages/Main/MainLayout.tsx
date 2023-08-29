@@ -31,6 +31,22 @@ const MainLayout: React.FC = () => {
           </p>
         </div>
       </section>
+      <section className="search-box-container">
+        <div className="top">
+          <div className="col-xs-12 col-sm-6 col-md-6">
+            <input type="text" />
+          </div>
+          <div className="col-xs-12 col-sm-6 col-md-2">
+            <input type="text" />
+          </div>
+          <div className="col-xs-12 col-sm-6 col-md-2">
+            <input type="text" />
+          </div>
+          <div className="col-xs-12 col-sm-6 col-md-2">
+            <input type="text" />
+          </div>
+        </div>
+      </section>
       <div className="container">
         <LatestList />
       </div>
