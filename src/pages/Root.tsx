@@ -1,7 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import "../assets/styles/index.scss";
-import {Outlet} from "react-router-dom";
 import "src/assets/styles/index.scss";
 import "src/assets/fontawesome/css/fontawesome.css";
 import "src/assets/fontawesome/css/brands.css";
