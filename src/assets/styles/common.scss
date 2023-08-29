@@ -9,12 +9,34 @@ body {
   font-size: 10px;
   letter-spacing: -0.5px;
   font-family: "Lato", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
   &.no-scroll {
     overflow: hidden;
   }
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+body,
+input,
+select,
+textarea,
+button,
+img,
+fieldset {
+  border: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .container {
@@ -30,6 +52,7 @@ section {
 }
 
 a {
+  text-decoration: none;
   color: inherit;
 }
 
