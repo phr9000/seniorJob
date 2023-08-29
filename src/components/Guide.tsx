@@ -39,20 +39,21 @@ export function BigBtn({title = "View All Jobs"}: BigBtnTitleProps) {
 }
 
 const Guide: React.FC = () => {
-  // 가이드 모듈 타이틀에 대한 스타일
-  const commonStyle = {
+  // 가이드 모듈타이틀에 대한 스타일
+  const commonStyle: React.CSSProperties = {
     fontWeight: '700',
-    backgroundColor: 'yellow',
+    backgroundColor: 'lightblue',
     marginTop: '20px',
     marginBottom: '20px',
   }
-  const fontSize30 = {
+  const fontSize30: React.CSSProperties = {
     fontSize: '30px',
     textIndent: '30px',
+    textAlign: "center"
   }
-  const fontSize20 = {
+  const fontSize20: React.CSSProperties = {
     fontSize: '20px',
-    backgroundColor: 'lightPink',
+    backgroundColor: 'gold',
     textIndent: '60px',
   }
 
