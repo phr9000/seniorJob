@@ -2,7 +2,8 @@
 import React from "react";
 
 /* Import Component */
-import LatestList from 'src/components/LatestList'
+// import LatestList from 'src/components/LatestList'
+import NeedHelp from './needhelp/NeedHelp'
 
 const MainLayout: React.FC = () => {
   return (
@@ -54,9 +55,11 @@ const MainLayout: React.FC = () => {
         <div className="text1">git pull success!</div>
       </>
 
+    <main className="main-container">
+
       <div className="container">
-        <LatestList/>
       </div>
+      <NeedHelp/>
     </main>
   );
 };
