@@ -10,8 +10,8 @@ const Category: React.FC = () => {
             <p>
                 <h3>txt01</h3>
                 <span>txt02</span>
-                </p>
-                <p className="arrow-area">
+            </p>
+            <p className="arrow-area">
                 <i className="far fa-clock"></i>
             </p>
         </div>
