@@ -1,6 +1,9 @@
 /* eslint-disable */
 import React from "react";
 
+/* Import Component */
+import LatestList from 'src/components/LatestList'
+
 const MainLayout: React.FC = () => {
   return (
     <main>
@@ -50,6 +53,10 @@ const MainLayout: React.FC = () => {
         </div>
         <div className="text1">git pull success!</div>
       </>
+
+      <div className="container">
+        <LatestList/>
+      </div>
     </main>
   );
 };
