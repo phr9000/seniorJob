@@ -12,7 +12,7 @@ const Category: React.FC = () => {
                 <span>txt02</span>
             </p>
             <p className="arrow-area">
-                <i className="far fa-clock"></i>
+                <i className="fa-solid fa-arrow-right"></i>
             </p>
         </div>
         </li>
