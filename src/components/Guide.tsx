@@ -48,13 +48,13 @@ const Guide: React.FC = () => {
   }
   const fontSize30: React.CSSProperties = {
     fontSize: '30px',
-    textIndent: '30px',
     textAlign: "center"
   }
   const fontSize20: React.CSSProperties = {
     fontSize: '20px',
+    padding: '10px 0',
     backgroundColor: 'gold',
-    textIndent: '60px',
+    textIndent: '30px',
   }
 
   // Latest List Item에 대한 변수
