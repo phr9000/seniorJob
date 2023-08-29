@@ -2,15 +2,15 @@
 import React from "react";
 
 /* Import Component */
-import LatestList from 'src/components/LatestList'
+// import LatestList from 'src/components/LatestList'
 import NeedHelp from './NeedHelp'
 
 const MainLayout: React.FC = () => {
   return (
-    <main>
+    <main className="main-container">
       <div className="container">
-        <NeedHelp/>
       </div>
+      <NeedHelp/>
     </main>
   );
 };

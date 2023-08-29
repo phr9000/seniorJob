@@ -1,14 +1,61 @@
 /* eslint-disable */
 import React from "react";
 
-/* Import SCSS */
-import "src/components/latestList.scss";
-
 const LatestList: React.FC = () => {
   return (
 
-    <section>
-      <i className="fas fa-pencil-alt"></i>
+    <section className="need-help-container">
+        <h2>Need help in finding the job you want?</h2>
+        <div className="grid">
+          <div>
+            <p className="img-area img-01"></p>
+            <div className="txt-area flex items-center justify-between">
+              <div>
+                <p>txt01</p>
+                <p>txt02</p>
+              </div>
+              <p>
+                <i className="far fa-clock"></i>
+              </p>
+            </div>
+          </div>
+          <div>
+            <p className="img-area img-01"></p>
+            <div className="txt-area items-center">
+              
+            </div>
+          </div>
+          <div>
+            <p className="img-area img-01"></p>
+            <div className="txt-area items-center">
+              
+            </div>
+          </div>
+          <div>
+            <p className="img-area img-01"></p>
+            <div className="txt-area items-center">
+              
+            </div>
+          </div>
+          <div>
+            <p className="img-area img-01"></p>
+            <div className="txt-area items-center">
+              
+            </div>
+          </div>
+          <div>
+            <p className="img-area img-01"></p>
+            <div className="txt-area items-center">
+              
+            </div>
+          </div>
+          <div>
+            <p className="img-area img-01"></p>
+            <div className="txt-area items-center">
+              
+            </div>
+          </div>
+        </div>
     </section>
   );
 };
