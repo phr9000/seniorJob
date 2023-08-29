@@ -31,8 +31,9 @@ const MainLayout: React.FC = () => {
           </p>
         </div>
       </section>
-      <div className="container"></div>
-      <LatestList />
+      <div className="container">
+        <LatestList />
+      </div>
       <NeedHelp />
     </main>
   );
