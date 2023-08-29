@@ -58,7 +58,7 @@
         }
       }
 
-      .jobtype_part {
+      .jobtype_part_time {
         max-width: 100%;
         width: 148px;
         height: 34px;
@@ -92,8 +92,8 @@
 
       }
 
-      .jobtype_pull {
-        @extend .jobtype_part;
+      .jobtype_full_time {
+        @extend .jobtype_part_time;
         background-color: #a6ead2;
         color: #0b6b49;
         border: 1px solid #a6ead2;
@@ -166,6 +166,7 @@
             .data_salary {
               font-size: 2.4rem;
               font-weight: 900;
+              margin-left: 5px;
               @include tablet_m {
                 display: block;
               }
