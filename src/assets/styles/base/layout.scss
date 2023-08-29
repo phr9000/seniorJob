@@ -1,0 +1,10 @@
+// grid
+.s-lg-grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.s-gap-15 {
+    gap: 1.5rem;
+}
+.s-gap-30 {
+    gap: 3rem;
+}

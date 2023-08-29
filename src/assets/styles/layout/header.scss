@@ -5,12 +5,40 @@ header {
   width: 100%;
   height: 60px;
   background-color: $white;
+  border-bottom: 1px solid #e7e7e7;
   .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 1170px;
+    height: 100%;
     margin: 0 auto;
+    @media (#{$tablet}) {
+      width: 970px;
+    }
   }
-  ul li {
-    margin-left: 10px;
-    font-size: 1.4rem;
+  .logo {
+    padding: 15px;
+    font-size: 1.8rem;
+    color: #4a4a4a;
+    line-height: 2rem;
+  }
+  ul {
+    height: 100%;
+    li {
+      display: flex;
+      align-items: center;
+      margin-left: 0.8rem;
+      padding: 0 1.5rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      height: 100%;
+      &:hover {
+        color: $blue2;
+      }
+      &.active {
+        border-top: 2px solid #000;
+      }
+    }
   }
 }

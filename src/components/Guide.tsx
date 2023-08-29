@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {Link} from "react-router-dom";
 import React from "react";
+import Button from "src/components/button/Button"
 
 /* Import imgs */
 import imgs from "src/common/ImgDef";
@@ -83,6 +84,8 @@ const Guide: React.FC = () => {
       <JobItem job={someJobData}/>
 
 
+      <h3>button component</h3>
+      <Button label="라벨ㄹㄹㄹ" color="red"/>
     </>
   );
 };

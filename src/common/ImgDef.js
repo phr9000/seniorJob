@@ -6,6 +6,7 @@
 
 /* ++++++ Load image path ++++++ */
 import thumb_01 from "../assets/imgs/thumb_01.png";
+import needHelp_01 from "../assets/imgs/need_help01.jpg";
 // ..추가가능
 
 
@@ -13,6 +14,7 @@ import thumb_01 from "../assets/imgs/thumb_01.png";
 /* ++++++ Set a variable ++++++  */
 const imgs = {
   thumb_01:thumb_01,
+  needHelp_01:needHelp_01
   // ..추가 가능
   
   
