@@ -25,3 +25,79 @@
     }
   }
 }
+
+// main common
+.main-container {
+  // title 
+  h2 { 
+    margin-top: 2rem;
+    margin-bottom: 1rem; 
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 2.86rem; 
+    text-align: center;
+  }
+}
+
+// 
+ // need help container 
+// 
+.need-help-container {
+  width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f0f0f0;
+  .grid {
+    max-width: 1170px;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 3rem; 
+    li {
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+      background-color: $white;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    }
+    .img-area {
+      &.img-01 {
+        width: 100%;
+        height: 9rem;
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: cover;
+        background-image: url('../../imgs/need_help01.jpg');
+      }
+    }
+    .txt-area {
+      padding: 10px;
+      h3 {
+        color: $primary;
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+      span {
+        
+      }
+      .arrow-img {
+
+      }
+    }
+  }
+  @media (#{$tablet}) {
+    .grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+  }
+  @media (#{$mobile}) {
+    .grid {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 0rem;
+      .img-area {
+        &.img-01 {
+          height: 200px;
+        }
+      }
+    }
+  }
+}

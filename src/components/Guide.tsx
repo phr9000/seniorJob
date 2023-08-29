@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {Link} from "react-router-dom";
 import React from "react";
+import Button from "src/components/button/Button"
 
 interface SecTitleProps {
   /**
@@ -58,6 +59,8 @@ const Guide: React.FC = () => {
       <div style={{...commonStyle, ...fontSize20}}>[btn Big]</div>
       <BigBtn/>
 
+      <h3>button component</h3>
+      <Button label="라벨ㄹㄹㄹ" color="red"/>
     </>
   );
 };
