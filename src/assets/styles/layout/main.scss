@@ -124,6 +124,9 @@ main {
     font-weight: 600;
     line-height: 2.86rem;
     text-align: center;
+    @media (#{$mobile}) {
+      font-size: 2rem;
+    }
   }
 }
 
@@ -163,10 +166,6 @@ main {
         color: $primary;
         font-size: 1.8rem;
         font-weight: 600;
-      }
-      span {
-      }
-      .arrow-img {
       }
     }
   }
