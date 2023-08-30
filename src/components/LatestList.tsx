@@ -62,7 +62,7 @@ export const JobItem: React.FC<{ job: typeof jobList[0] }> = ({job}) => (
             <i className="fas fa-pencil-alt"></i>
             &nbsp;&nbsp;Posted on {job.postedOn}
           </span>
-          <div className="row flex items-center">
+          <div className="time_type row flex items-center">
             {job.jobTypes.map(type => (
               <p className={`jobtype_${type.toLowerCase().replace(" ", "_")}`} key={type}>
                 <i className="far fa-clock"></i>
@@ -72,7 +72,7 @@ export const JobItem: React.FC<{ job: typeof jobList[0] }> = ({job}) => (
           </div>
         </div>
         <div className="row course_desc">
-          <h3 className="job_tit">{job.title}</h3>
+          <h3 className="job_tit pc_ver">{job.title}</h3>
           <div className="job_desc flex justify-between">
             <ul className="flex align-center">
               <li>
@@ -94,7 +94,8 @@ export const JobItem: React.FC<{ job: typeof jobList[0] }> = ({job}) => (
                 </span>
               </li>
             </ul>
-            <div className="row">
+            <h3 className="job_tit mo_ver">{job.title}</h3>
+            <div className="row salary_area">
               <div className="salary">UP TO <span className="data_salary">{job.salary}</span></div>
               <div className="salperiod">{job.period}</div>
             </div>
@@ -107,133 +108,130 @@ export const JobItem: React.FC<{ job: typeof jobList[0] }> = ({job}) => (
 
 const LatestList: React.FC = () => {
   return (
-    
-    <section className="latestListComp">
-      <div className="section_inner">
-        <SecTitle title="Latest Jobs"/>
-        
-        {/* 컴포넌트 분리 및 데이터 구조화 */}
-        <ul>
-          {jobList.map(job => <JobItem job={job} key={job.title}/>)}
-        </ul>
-        
-        
-        {/* 기존 마크업 */}
-        {/*<ul>*/}
-        {/*  <li className="sec_list">*/}
-        {/*    <a href="#" className="add_links flex">*/}
-        {/*      <div className="thumb_area shrink-0">*/}
-        {/*        <img src={imgs.thumb_01} alt=""/>*/}
-        {/*      </div>*/}
-        {/*      <div className="text_area">*/}
-        {/*        <div className="row flex justify-between">*/}
-        {/*        <span className="posted_on">*/}
-        {/*          <i className="fas fa-pencil-alt"></i>*/}
-        {/*          &nbsp;&nbsp;Posted on 26 Aug 2023*/}
-        {/*        </span>*/}
-        {/*          <div className="row flex items-center">*/}
-        {/*            <p className="jobtype_part">*/}
-        {/*              <i className="far fa-clock"></i>*/}
-        {/*              &nbsp;&nbsp;Part Time*/}
-        {/*            </p>*/}
-        {/*            <p className="jobtype_pull">*/}
-        {/*              <i className="far fa-clock"></i>*/}
-        {/*              &nbsp;&nbsp;Full Time*/}
-        {/*            </p>*/}
-        {/*          </div>*/}
-        {/*        </div>*/}
-        {/*        <div className="row course_desc">*/}
-        {/*          <h3 className="job_tit">Fashion Retail Assistant (Part-Time)</h3>*/}
-        {/*          <div className="job_desc flex justify-between">*/}
-        {/*            <ul className="flex align-center">*/}
-        {/*              <li>*/}
-        {/*              <span className="txt">*/}
-        {/*                <i className="fas fa-building"></i>*/}
-        {/*                &nbsp;&nbsp;CENTRE FOR SENIORS*/}
-        {/*              </span>*/}
-        {/*              </li>*/}
-        {/*              <li>*/}
-        {/*              <span className="txt">*/}
-        {/*                <i className="fas fa-map-marker-alt"></i>*/}
-        {/*                &nbsp;&nbsp;Dakota - CC8*/}
-        {/*              </span>*/}
-        {/*              </li>*/}
-        {/*              <li>*/}
-        {/*              <span className="txt">*/}
-        {/*                <i className="fas fa-calendar-alt"></i>*/}
-        {/*                &nbsp;&nbsp;Shifts*/}
-        {/*              </span>*/}
-        {/*              </li>*/}
-        {/*            </ul>*/}
-        {/*            <div className="row">*/}
-        {/*              <div className="salary">*/}
-        {/*                UP TO*/}
-        {/*                <span className="data_salary">$3500</span>*/}
-        {/*              </div>*/}
-        {/*              <div className="salperiod">per month</div>*/}
-        {/*            </div>*/}
-        {/*          </div>*/}
-        {/*        </div>*/}
-        {/*      </div>*/}
-        {/*    </a>*/}
-        {/*  </li>*/}
-        {/*  <li className="sec_list">*/}
-        {/*    <a href="#" className="add_links flex">*/}
-        {/*      <div className="thumb_area shrink-0">*/}
-        {/*        <img src={imgs.thumb_01} alt=""/>*/}
-        {/*      </div>*/}
-        {/*      <div className="text_area">*/}
-        {/*        <div className="row flex justify-between">*/}
-        {/*        <span className="posted_on">*/}
-        {/*          <i className="fas fa-pencil-alt"></i>*/}
-        {/*          &nbsp;&nbsp;Posted on 26 Aug 2023*/}
-        {/*        </span>*/}
-        {/*          <div className="row flex items-center">*/}
-        {/*            <p className="jobtype_pull">*/}
-        {/*              <i className="far fa-clock"></i>*/}
-        {/*              &nbsp;&nbsp;Full Time*/}
-        {/*            </p>*/}
-        {/*          </div>*/}
-        {/*        </div>*/}
-        {/*        <div className="row course_desc">*/}
-        {/*          <h3 className="job_tit">Trolley Service Officer (F/T)</h3>*/}
-        {/*          <div className="job_desc flex justify-between">*/}
-        {/*            <ul className="flex align-center">*/}
-        {/*              <li>*/}
-        {/*              <span className="txt">*/}
-        {/*                <i className="fas fa-building"></i>*/}
-        {/*                &nbsp;&nbsp;CENTRE FOR SENIORS*/}
-        {/*              </span>*/}
-        {/*              </li>*/}
-        {/*              <li>*/}
-        {/*              <span className="txt">*/}
-        {/*                <i className="fas fa-map-marker-alt"></i>*/}
-        {/*                &nbsp;&nbsp;Changi Airport - CG2*/}
-        {/*              </span>*/}
-        {/*              </li>*/}
-        {/*              <li>*/}
-        {/*              <span className="txt">*/}
-        {/*                <i className="fas fa-calendar-alt"></i>*/}
-        {/*                &nbsp;&nbsp;Shifts*/}
-        {/*              </span>*/}
-        {/*              </li>*/}
-        {/*            </ul>*/}
-        {/*            <div className="row">*/}
-        {/*              <div className="salary">*/}
-        {/*                UP TO*/}
-        {/*                <span className="data_salary">$1600</span>*/}
-        {/*              </div>*/}
-        {/*              <div className="salperiod">per month</div>*/}
-        {/*            </div>*/}
-        {/*          </div>*/}
-        {/*        </div>*/}
-        {/*      </div>*/}
-        {/*    </a>*/}
-        {/*  </li>*/}
-        {/*</ul>*/}
-        <BigBtn title="View All Jobs"/>
-      </div>
-    </section>
+    <div className="section_inner">
+      <SecTitle title="Latest Jobs"/>
+      
+      {/* 컴포넌트 분리 및 데이터 구조화 */}
+      <ul>
+        {jobList.map(job => <JobItem job={job} key={job.title}/>)}
+      </ul>
+      
+      
+      {/* 기존 마크업 */}
+      {/*<ul>*/}
+      {/*  <li className="sec_list">*/}
+      {/*    <a href="#" className="add_links flex">*/}
+      {/*      <div className="thumb_area shrink-0">*/}
+      {/*        <img src={imgs.thumb_01} alt=""/>*/}
+      {/*      </div>*/}
+      {/*      <div className="text_area">*/}
+      {/*        <div className="row flex justify-between">*/}
+      {/*        <span className="posted_on">*/}
+      {/*          <i className="fas fa-pencil-alt"></i>*/}
+      {/*          &nbsp;&nbsp;Posted on 26 Aug 2023*/}
+      {/*        </span>*/}
+      {/*          <div className="row flex items-center">*/}
+      {/*            <p className="jobtype_part">*/}
+      {/*              <i className="far fa-clock"></i>*/}
+      {/*              &nbsp;&nbsp;Part Time*/}
+      {/*            </p>*/}
+      {/*            <p className="jobtype_pull">*/}
+      {/*              <i className="far fa-clock"></i>*/}
+      {/*              &nbsp;&nbsp;Full Time*/}
+      {/*            </p>*/}
+      {/*          </div>*/}
+      {/*        </div>*/}
+      {/*        <div className="row course_desc">*/}
+      {/*          <h3 className="job_tit">Fashion Retail Assistant (Part-Time)</h3>*/}
+      {/*          <div className="job_desc flex justify-between">*/}
+      {/*            <ul className="flex align-center">*/}
+      {/*              <li>*/}
+      {/*              <span className="txt">*/}
+      {/*                <i className="fas fa-building"></i>*/}
+      {/*                &nbsp;&nbsp;CENTRE FOR SENIORS*/}
+      {/*              </span>*/}
+      {/*              </li>*/}
+      {/*              <li>*/}
+      {/*              <span className="txt">*/}
+      {/*                <i className="fas fa-map-marker-alt"></i>*/}
+      {/*                &nbsp;&nbsp;Dakota - CC8*/}
+      {/*              </span>*/}
+      {/*              </li>*/}
+      {/*              <li>*/}
+      {/*              <span className="txt">*/}
+      {/*                <i className="fas fa-calendar-alt"></i>*/}
+      {/*                &nbsp;&nbsp;Shifts*/}
+      {/*              </span>*/}
+      {/*              </li>*/}
+      {/*            </ul>*/}
+      {/*            <div className="row">*/}
+      {/*              <div className="salary">*/}
+      {/*                UP TO*/}
+      {/*                <span className="data_salary">$3500</span>*/}
+      {/*              </div>*/}
+      {/*              <div className="salperiod">per month</div>*/}
+      {/*            </div>*/}
+      {/*          </div>*/}
+      {/*        </div>*/}
+      {/*      </div>*/}
+      {/*    </a>*/}
+      {/*  </li>*/}
+      {/*  <li className="sec_list">*/}
+      {/*    <a href="#" className="add_links flex">*/}
+      {/*      <div className="thumb_area shrink-0">*/}
+      {/*        <img src={imgs.thumb_01} alt=""/>*/}
+      {/*      </div>*/}
+      {/*      <div className="text_area">*/}
+      {/*        <div className="row flex justify-between">*/}
+      {/*        <span className="posted_on">*/}
+      {/*          <i className="fas fa-pencil-alt"></i>*/}
+      {/*          &nbsp;&nbsp;Posted on 26 Aug 2023*/}
+      {/*        </span>*/}
+      {/*          <div className="row flex items-center">*/}
+      {/*            <p className="jobtype_pull">*/}
+      {/*              <i className="far fa-clock"></i>*/}
+      {/*              &nbsp;&nbsp;Full Time*/}
+      {/*            </p>*/}
+      {/*          </div>*/}
+      {/*        </div>*/}
+      {/*        <div className="row course_desc">*/}
+      {/*          <h3 className="job_tit">Trolley Service Officer (F/T)</h3>*/}
+      {/*          <div className="job_desc flex justify-between">*/}
+      {/*            <ul className="flex align-center">*/}
+      {/*              <li>*/}
+      {/*              <span className="txt">*/}
+      {/*                <i className="fas fa-building"></i>*/}
+      {/*                &nbsp;&nbsp;CENTRE FOR SENIORS*/}
+      {/*              </span>*/}
+      {/*              </li>*/}
+      {/*              <li>*/}
+      {/*              <span className="txt">*/}
+      {/*                <i className="fas fa-map-marker-alt"></i>*/}
+      {/*                &nbsp;&nbsp;Changi Airport - CG2*/}
+      {/*              </span>*/}
+      {/*              </li>*/}
+      {/*              <li>*/}
+      {/*              <span className="txt">*/}
+      {/*                <i className="fas fa-calendar-alt"></i>*/}
+      {/*                &nbsp;&nbsp;Shifts*/}
+      {/*              </span>*/}
+      {/*              </li>*/}
+      {/*            </ul>*/}
+      {/*            <div className="row">*/}
+      {/*              <div className="salary">*/}
+      {/*                UP TO*/}
+      {/*                <span className="data_salary">$1600</span>*/}
+      {/*              </div>*/}
+      {/*              <div className="salperiod">per month</div>*/}
+      {/*            </div>*/}
+      {/*          </div>*/}
+      {/*        </div>*/}
+      {/*      </div>*/}
+      {/*    </a>*/}
+      {/*  </li>*/}
+      {/*</ul>*/}
+      <BigBtn title="View All Jobs"/>
+    </div>
   );
 };
 export default LatestList;

@@ -86,7 +86,6 @@ const Guide: React.FC = () => {
       <div style={{...commonStyle, ...fontSize20}}>[Latest List Item]</div>
       <JobItem job={someJobData}/>
       
-      
       <div style={{...commonStyle, ...fontSize20}}>[button component]</div>
       <Button label="라벨ㄹㄹㄹ" color="red"/>
     </>

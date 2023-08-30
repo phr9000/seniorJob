@@ -8,7 +8,7 @@
 }
 
 .sec_list {
-  padding: 1.5rem;
+  padding: 1.5rem 0;
   border-bottom: 1px solid #ccc;
   
   .add_links {
@@ -45,9 +45,11 @@
       }
       
       .posted_on {
+        @include flex(flex, null, center);
         font-size: 1.2rem;
         text-transform: uppercase;
         color: #777;
+        padding: 0 1.5rem;
         
         @include mobile {
           padding-bottom: 1rem;
@@ -55,6 +57,18 @@
         
         .fas {
           display: inline-block;
+        }
+      }
+      
+      .time_type {
+        padding: 0 0.5rem;
+        
+        @include mobile {
+          padding: 0 1rem 1rem;
+        }
+        
+        p {
+          word-break: keep-all;
         }
       }
       
@@ -101,6 +115,10 @@
       
       
       .course_desc {
+        @include flex(flex);
+        flex-direction: column;
+        padding: 0 1.5rem;
+        
         .job_tit {
           font-size: 2rem;
           font-weight: 600;
@@ -108,11 +126,42 @@
           color: $primary;
           word-wrap: break-word;
           line-height: 1.1;
+          
+          
+          @include desktop {
+            &.mo_ver {
+              display: none;
+            }
+          }
+          @include tablet_m {
+            &.mo_ver {
+              display: none;
+            }
+          }
+          
+          @include tablet {
+            &.mo_ver {
+              display: none;
+            }
+          }
+          
+          @include mobile {
+            font-size: 1.7rem;
+            &.pc_ver {
+              display: none;
+            }
+          }
         }
         
         .job_desc {
+          width: 100%;
+          
+          @include mobile {
+            flex-direction: column-reverse;
+          }
+          
           ul {
-            margin-bottom: 20px;
+            margin-bottom: 2rem;
             
             @include tablet_m {
               flex-direction: column;
@@ -139,6 +188,16 @@
               
               &:not(:last-child) {
                 border-right: 1px solid #ccc;
+                
+                @include tablet_m {
+                  border: none;
+                }
+                @include tablet {
+                  border: none;
+                }
+                @include mobile {
+                  border: none;
+                }
               }
               
               &:not(:first-child) {
@@ -157,21 +216,37 @@
             }
           }
           
+          .salary_area {
+            text-align: right;
+            
+            @include mobile {
+              text-align: left;
+              padding-bottom: 1rem;
+            }
+          }
+          
           .salary {
             font-size: 1.4rem;
             font-weight: 500;
             color: #333;
             text-transform: uppercase;
             
+            @include mobile {
+              @include flex(flex, null, center);
+            }
+            
             .data_salary {
               font-size: 2.4rem;
               font-weight: 900;
-              margin-left: 5px;
+              margin-left: 0.5rem;
+              
               @include tablet_m {
                 display: block;
+                margin-left: 0;
               }
               @include tablet {
                 display: block;
+                margin-left: 0;
               }
               @include mobile {
                 display: block;
@@ -186,6 +261,10 @@
             text-transform: uppercase;
             color: #777;
             text-align: end;
+            
+            @include mobile {
+              text-align: left;
+            }
           }
         }
         
