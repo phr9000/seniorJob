@@ -21,7 +21,6 @@ header {
     color: #4a4a4a;
     line-height: 2rem;
     cursor: pointer;
-    font-weight: 700;
   }
   .dropdown-area {
     display: flex;
@@ -80,6 +79,8 @@ header {
       top: 50%; 
       left: 50%;
       transform: translate(-50%, -50%);
+      font-size: 3rem; 
+      font-weight: 500;
     }
     .h-100 {
       height: auto;
@@ -96,6 +97,7 @@ header {
       max-height: 34rem;
       overflow: auto;
       background-color: $white;
+      @include beautiful-scroll;
       &.active {
         display: block;
       }
