@@ -3,7 +3,7 @@ import React from "react";
 
 /* Import Component */
 import LatestList from "src/components/LatestList";
-import NeedHelp from "./needhelp/NeedHelp";
+import NeedHelp from "src/pages/Main/needhelp/NeedHelp";
 
 
 

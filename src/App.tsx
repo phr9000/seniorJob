@@ -1,11 +1,13 @@
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import Root from "./pages/Root";
-import MainLayout from "./pages/Main/MainLayout";
-import Guide from "./components/Guide";
-// import LatestList from "./components/LatestList";
-// import Button from "./components/button/Button";
 import React from "react";
-import "./App.css";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+
+import Root from "src/pages/Root";
+import MainLayout from "src/pages/Main/MainLayout";
+import Guide from "src/components/Guide";
+// import LatestList from "src/components/LatestList";
+// import Button from "src/components/button/Button";
+
+import "src/App.css";
 
 
 
