@@ -2,6 +2,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
   width: 100%;
   height: 60px;
   background-color: $white;
@@ -13,15 +14,28 @@ header {
     width: 1170px;
     height: 100%;
     margin: 0 auto;
-    @media (#{$tablet}) {
-      width: 970px;
-    }
   }
   .logo {
     padding: 15px;
     font-size: 1.8rem;
     color: #4a4a4a;
     line-height: 2rem;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  .dropdown-area {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  .menubar-icon {
+    display: none;
+    font-size: 2.2rem;
+    margin-left: auto;
+    cursor: pointer;
+    .fa-solid {
+      color: $primary; 
+    }
   }
   ul {
     height: 100%;
@@ -33,12 +47,97 @@ header {
       font-size: 1.4rem;
       font-weight: 700;
       height: 100%;
+      cursor: pointer;
       &:hover {
         color: $blue2;
       }
       &.active {
         border-top: 2px solid #000;
       }
+    }
+  }
+}
+
+// $pc-small 1200px
+@media (#{$pc-small}) {
+  header {
+    .header-inner {
+      width: 970px;
+    }
+  }
+}
+
+//$tablet 990px
+@media (#{$tablet}) {
+  header {
+    .header-inner {
+      margin: 0 auto;
+      padding: 1.5rem;
+      width: 75rem;
+    }
+    .logo {
+      position: absolute;
+      top: 50%; 
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .h-100 {
+      height: auto;
+    }
+    .dropdown-area {
+      display: none;
+      position: fixed;
+      top: 6rem;
+      left: 0;
+      z-index: 101;
+      padding: 2rem 1.5rem;
+      width: 100%;
+      height: 34rem;
+      max-height: 34rem;
+      overflow: auto;
+      background-color: $white;
+      &.active {
+        display: block;
+      }
+      ul {
+        display: block;
+        li {
+          display: block; 
+          padding: 0;
+          padding-bottom: 1.5rem;
+          margin: 0;
+          font-size: 1.8rem;
+          text-align: center;
+          &.active {
+            color: $red1;
+            border-top: none;
+          }
+        }
+      }
+      .btn {
+        display: block;
+        padding: 10px;
+        margin: 0;
+        margin-bottom: 1rem;
+        width: 100%;
+        font-size: 1.8rem;
+      }
+    }
+    .menubar-icon {
+      display: block;
+      padding: 1rem; 
+      .active {
+        display: block;
+      }
+    }
+  }
+}
+
+//$mobile 768px
+@media (#{$mobile}) {
+  header {
+    .header-inner {
+      width: 100%;
     }
   }
 }
