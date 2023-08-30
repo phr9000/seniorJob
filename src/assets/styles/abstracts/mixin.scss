@@ -1,38 +1,44 @@
-@import "/src/assets/styles/abstracts/variables.scss";
+@import "src/assets/styles/abstracts/variables.scss";
 
 
-// 반응형
+/* ===== 반응형 Mixin Include 방식 사용시 S ===== */
 $mobile-width: 320px;
 $tablet-width: 768px;
 $tablet-m-width: 990px;
 $desktop-width: 1200px;
 
-
+// 768이하
 @mixin mobile {
   @media (max-width: #{$tablet-width - 1px}) {
     @content;
   }
 }
 
+// 768에서 989까지
 @mixin tablet {
   @media (min-width: #{$tablet-width}) and (max-width: #{$tablet-m-width - 1px}) {
     @content;
   }
 }
 
+// 990부터 1199까지
 @mixin tablet_m {
   @media (min-width: #{$tablet-m-width}) and (max-width: #{$desktop-width - 1px}) {
     @content;
   }
 }
 
+// PC 1200부터 ~ PC전체
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
     @content;
   }
 }
 
+/* ===== 반응형 Mixin Include 방식 사용시 E ===== */
 
+
+// 폰트
 @mixin font($size, $weight, $color, $height: 1) {
   font-size: $size;
   font-weight: $weight;
@@ -55,11 +61,12 @@ $desktop-width: 1200px;
   }
 }
 
+// 플렉스
 @mixin flex($direction: row, $justify: flex-start, $align: flex-start) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-
+  
   // flex //
   @if $direction==row {
     -webkit-box-orient: horizontal;
@@ -80,7 +87,7 @@ $desktop-width: 1200px;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
-
+  
   // justify-content //
   @if $justify==flex-start {
     -webkit-box-pack: start;
@@ -99,7 +106,7 @@ $desktop-width: 1200px;
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
-
+  
   // align-items //
   @if $align==flex-start {
     -webkit-box-align: start;
@@ -135,7 +142,7 @@ $desktop-width: 1200px;
   position: absolute;
   left: $x;
   top: $y;
-
+  
   @if $x == 50% and $y == 50% {
     transform: translate(-50%, -50%);
   } @else if $x == 50% {
