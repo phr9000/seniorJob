@@ -5,18 +5,20 @@ import React from "react";
 import imgs from 'src/common/ImgDef';
 
 /* Import SCSS */
-import "src/components/latestList.scss";
+import "src/assets/styles/layout/latestList.scss";
 
 /* Import Component */
 import {SecTitle} from 'src/components/Guide';
 import {BigBtn} from 'src/components/Guide';
 
 
+
+
 const jobList = [
   {
     thumb: imgs.thumb_01,
     postedOn: "26 Aug 2023",
-    jobTypes: ["Part Time", "Full Time"],
+    jobTypes: [ "Part Time", "Full Time" ],
     title: "Fashion Retail Assistant (Part-Time)",
     company: "CENTRE FOR SENIORS",
     location: "Dakota - CC8",
@@ -27,7 +29,7 @@ const jobList = [
   {
     thumb: imgs.thumb_01,
     postedOn: "26 Aug 2023",
-    jobTypes: ["Full Time"],
+    jobTypes: [ "Full Time" ],
     title: "Trolley Service Officer (F/T)",
     company: "CENTRE FOR SENIORS",
     location: "Changi Airport - CG2",
@@ -38,7 +40,7 @@ const jobList = [
   {
     thumb: imgs.thumb_01,
     postedOn: "26 Aug 2023",
-    jobTypes: ["Full Time"],
+    jobTypes: [ "Full Time" ],
     title: "Training For Befrienders (English)",
     company: "CENTRE FOR SENIORS",
     location: "Changi Airport - CG2",
@@ -105,17 +107,17 @@ export const JobItem: React.FC<{ job: typeof jobList[0] }> = ({job}) => (
 
 const LatestList: React.FC = () => {
   return (
-
+    
     <section className="latestListComp">
       <div className="section_inner">
         <SecTitle title="Latest Jobs"/>
-
+        
         {/* 컴포넌트 분리 및 데이터 구조화 */}
         <ul>
           {jobList.map(job => <JobItem job={job} key={job.title}/>)}
         </ul>
-
-
+        
+        
         {/* 기존 마크업 */}
         {/*<ul>*/}
         {/*  <li className="sec_list">*/}
