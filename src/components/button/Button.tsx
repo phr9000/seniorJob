@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({ label = '버튼 라벨명', color = 'ba
       break;
 
     case 'primary':
-      colorClass = 'btn-primary';
+      colorClass = 'btn-blue';
       break;
 
     default:

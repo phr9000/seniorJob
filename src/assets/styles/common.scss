@@ -135,4 +135,14 @@ em {
   @include ellipsis(2);
 }
 
+// 왼쪽 정렬
+.y-margin-right {
+  margin-right: auto;
+}
+
+// 오른쪽 정렬
+.y-margin-left {
+  margin-left: auto;
+}
+
 // ------- layout ------- //

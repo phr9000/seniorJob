@@ -8,14 +8,14 @@
   color: #000;
   border-radius: 0.5rem;
   border: 1px solid $black;
-  &.red {
+  &-red {
     color: $red1;
     border: 1px solid $red1;
     &:hover {
       color: $red1;
     }
   }
-  &.blue {
+  &-blue {
     color: $white;
     background-color: $primary;
     border: 1px solid $primary;
