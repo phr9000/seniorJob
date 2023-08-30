@@ -8,9 +8,6 @@ import "src/assets/fontawesome/css/solid.css";
 // 파일경로 미생성 으로 인한 임시 주석처리
 import Header from "../components/Header";
 
-
-
-
 const Root: React.FC = () => {
   return (
     <div>
