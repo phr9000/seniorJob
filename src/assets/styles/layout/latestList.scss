@@ -1,5 +1,5 @@
-@import "../abstracts/mixin";
-@import "../abstracts/variables";
+@import "src/assets/styles/abstracts/mixin";
+@import "src/assets/styles/abstracts/variables";
 
 .add_links {
   @include mobile {

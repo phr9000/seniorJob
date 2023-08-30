@@ -1,4 +1,4 @@
-@import "/src/assets/styles/abstracts/variables.scss";
+@import "src/assets/styles/abstracts/variables.scss";
 
 
 // 반응형
@@ -59,7 +59,7 @@ $desktop-width: 1200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-
+  
   // flex //
   @if $direction==row {
     -webkit-box-orient: horizontal;
@@ -80,7 +80,7 @@ $desktop-width: 1200px;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
-
+  
   // justify-content //
   @if $justify==flex-start {
     -webkit-box-pack: start;
@@ -99,7 +99,7 @@ $desktop-width: 1200px;
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
-
+  
   // align-items //
   @if $align==flex-start {
     -webkit-box-align: start;
@@ -135,7 +135,7 @@ $desktop-width: 1200px;
   position: absolute;
   left: $x;
   top: $y;
-
+  
   @if $x == 50% and $y == 50% {
     transform: translate(-50%, -50%);
   } @else if $x == 50% {
