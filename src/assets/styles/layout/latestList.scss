@@ -1,5 +1,5 @@
-@import "src/assets/styles/abstracts/mixin.scss";
-@import "src/assets/styles/abstracts/variables.scss";
+@import "../abstracts/mixin";
+@import "../abstracts/variables";
 
 .add_links {
   @include mobile {
@@ -10,28 +10,28 @@
 .sec_list {
   padding: 1.5rem;
   border-bottom: 1px solid #ccc;
-
+  
   .add_links {
     .thumb_area {
       width: 190px;
       height: 160px;
       padding: 0 1.5rem;
-
+      
       @include mobile {
         width: 100%;
         height: 100%;
         padding: 0 0 1.5rem 0;
       }
-
+      
       img {
         display: block;
         width: 100%;
       }
     }
-
+    
     .text_area {
       width: 100%;
-
+      
       > div {
         @include tablet_m {
           padding-bottom: 1rem;
@@ -43,21 +43,21 @@
           flex-direction: column;
         }
       }
-
+      
       .posted_on {
         font-size: 1.2rem;
         text-transform: uppercase;
         color: #777;
-
+        
         @include mobile {
           padding-bottom: 1rem;
         }
-
+        
         .fas {
           display: inline-block;
         }
       }
-
+      
       .jobtype_part_time {
         max-width: 100%;
         width: 148px;
@@ -70,36 +70,36 @@
         border: 1px solid #ffd2b2;
         background-color: #ffd2b2;
         color: #a74500;
-
-
+        
+        
         &:not(:last-child) {
           margin-right: 1rem;
         }
-
+        
         @include tablet_m {
           margin-bottom: 1rem;
         }
-
+        
         @include tablet {
           margin-bottom: 1rem;
         }
-
+        
         @include mobile {
           width: 50%;
           height: auto;
           margin-bottom: 1rem;
         }
-
+        
       }
-
+      
       .jobtype_full_time {
         @extend .jobtype_part_time;
         background-color: #a6ead2;
         color: #0b6b49;
         border: 1px solid #a6ead2;
       }
-
-
+      
+      
       .course_desc {
         .job_tit {
           font-size: 2rem;
@@ -109,11 +109,11 @@
           word-wrap: break-word;
           line-height: 1.1;
         }
-
+        
         .job_desc {
           ul {
             margin-bottom: 20px;
-
+            
             @include tablet_m {
               flex-direction: column;
               align-items: flex-start;
@@ -126,24 +126,24 @@
               flex-direction: column;
               align-items: flex-start;
             }
-
+            
             li {
               display: inline;
               color: #333;
               padding-right: 1rem;
-
+              
               span.txt {
                 font-size: 1.6rem;
                 color: #333;
               }
-
+              
               &:not(:last-child) {
                 border-right: 1px solid #ccc;
               }
-
+              
               &:not(:first-child) {
                 padding-left: 1rem;
-
+                
                 @include tablet_m {
                   padding-left: 0;
                 }
@@ -156,13 +156,13 @@
               }
             }
           }
-
+          
           .salary {
             font-size: 1.4rem;
             font-weight: 500;
             color: #333;
             text-transform: uppercase;
-
+            
             .data_salary {
               font-size: 2.4rem;
               font-weight: 900;
@@ -178,7 +178,7 @@
               }
             }
           }
-
+          
           .salperiod {
             font-size: 1.4rem;
             font-weight: 300;
@@ -188,7 +188,7 @@
             text-align: end;
           }
         }
-
+        
       }
     }
   }
