@@ -23,6 +23,9 @@ main {
       width: 1170px;
       color: #fff;
       text-align: center;
+      @media (#{$pc-small}) {
+        width: 90%;
+      }
       @media (#{$tablet}) {
         top: 2rem; 
         padding: 0 1.5rem;
@@ -57,6 +60,7 @@ main {
         }
         @media (#{$mobile}) {
           font-size: 1.3rem;
+          font-weight: 400;
         }
       }
       .go-link {
