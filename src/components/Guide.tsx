@@ -52,6 +52,7 @@ const Guide: React.FC = () => {
   }
   const fontSize30: React.CSSProperties = {
     fontSize: '30px',
+    padding: '10px 0',
     textAlign: "center"
   }
   const fontSize20: React.CSSProperties = {
@@ -59,6 +60,9 @@ const Guide: React.FC = () => {
     padding: '10px 0',
     backgroundColor: 'gold',
     textIndent: '30px',
+  }
+  const styelMargin = {
+    marginTop: '80px'
   }
   
   // Latest List Item에 대한 변수
@@ -75,8 +79,8 @@ const Guide: React.FC = () => {
   };
   
   return (
-    <>
-      <div style={{...commonStyle, ...fontSize30}}>[Guide Page]</div>
+    <div style={styelMargin}>
+      <div style={{...commonStyle, ...fontSize30}}>[ Guide Page ]</div>
       <div style={{...commonStyle, ...fontSize20}}>[Section Titile]</div>
       <SecTitle/>
       
@@ -86,10 +90,9 @@ const Guide: React.FC = () => {
       <div style={{...commonStyle, ...fontSize20}}>[Latest List Item]</div>
       <JobItem job={someJobData}/>
       
-      
       <div style={{...commonStyle, ...fontSize20}}>[button component]</div>
       <Button label="라벨ㄹㄹㄹ" color="red"/>
-    </>
+    </div>
   );
 };
 export default Guide;

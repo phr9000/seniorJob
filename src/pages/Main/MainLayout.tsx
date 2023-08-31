@@ -3,7 +3,10 @@ import React from "react";
 
 /* Import Component */
 import LatestList from "src/components/LatestList";
-import NeedHelp from "./needhelp/NeedHelp";
+import NeedHelp from "src/pages/Main/needhelp/NeedHelp";
+
+
+
 
 const MainLayout: React.FC = () => {
   return (
@@ -34,23 +37,23 @@ const MainLayout: React.FC = () => {
       <section className="search-box-container">
         <div className="top">
           <div className="col-xs-12 col-sm-6 col-md-6">
-            <input type="text" />
+            <input type="text"/>
           </div>
           <div className="col-xs-12 col-sm-6 col-md-2">
-            <input type="text" />
+            <input type="text"/>
           </div>
           <div className="col-xs-12 col-sm-6 col-md-2">
-            <input type="text" />
+            <input type="text"/>
           </div>
           <div className="col-xs-12 col-sm-6 col-md-2">
-            <input type="text" />
+            <input type="text"/>
           </div>
         </div>
       </section>
-      <div className="container">
-        <LatestList />
-      </div>
-      <NeedHelp />
+      <section className="latestListComp">
+        <LatestList/>
+      </section>
+      <NeedHelp/>
     </main>
   );
 };
