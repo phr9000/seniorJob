@@ -6,7 +6,7 @@ import MainLayout from "src/pages/Main/MainLayout";
 import Guide from "src/components/Guide";
 // import LatestList from "src/components/LatestList";
 // import Button from "src/components/button/Button";
-import AvailCoursrs from "src/components/AvailCourses";
+// import AvailCoursrs from "src/components/AvailCourses";
 
 import "src/App.css";
 
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       {path: "/guide", element: <Guide/>},
       // {path: "/latest-list", element: <LatestList/>},
       // {path: "/button", element: <Button/>},
-      {path: "/avail_course", element: <AvailCoursrs/>},
+      // {path: "/avail_course", element: <AvailCoursrs/>},
     ],
   },
 ]);

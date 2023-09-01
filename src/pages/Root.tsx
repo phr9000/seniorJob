@@ -8,6 +8,7 @@ import "src/assets/fontawesome/css/brands.css";
 import "src/assets/fontawesome/css/solid.css";
 
 import Header from "src/components/Header";
+import Footer from "src/components/Footer";
 
 
 
@@ -19,6 +20,7 @@ const Root: React.FC = () => {
       <div>
         <Outlet/>
       </div>
+      <Footer/>
     </div>
   );
 };
