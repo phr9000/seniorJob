@@ -21,6 +21,10 @@ footer {
           @include font(1.6rem, 900, #000);
           padding: 5px;
           word-break: keep-all;
+          
+          i {
+            color: #3b5998;
+          }
         }
         
         &:not(:last-child) {
