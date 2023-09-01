@@ -68,7 +68,7 @@ export const CoursesItem: React.FC<{ courses: typeof coursesList[0] }> = ({cours
         </div>
         <div className="row course_desc">
           <h3 className="courses_tit pc_ver">{courses.title}</h3>
-          <div className="courses_desc flex justify-between">
+          <div className="courses_info flex justify-between">
             <ul className="flex align-center">
               <li>
                 <span className="txt">
@@ -89,8 +89,8 @@ export const CoursesItem: React.FC<{ courses: typeof coursesList[0] }> = ({cours
                 </span>
               </li>
             </ul>
-            <h3 className="job_tit mo_ver">{courses.title}</h3>
-            <div className="row salary_area">
+            <h3 className="courses_tit mo_ver">{courses.title}</h3>
+            <div className="row salary_area_avail">
               <div>
                 <div className="salary"><span className="data_salary">{courses.salary}</span></div>
                 <div className="salperiod">{courses.fullFee}</div>
@@ -113,12 +113,12 @@ const margin = {
 };
 const AvailCourses: React.FC = () => {
   return (
-    <div className="section_inner" style={margin}>
+    <div className="section_inner">
       <SecTitle title="Available Courses"/>
       <SecTitleDesc
         desc="We offer a variety of courses to help you advance in your career. Enrol now into a suitable course."
       />
-      <ul>
+      <ul className="sec_cont">
         {coursesList.map(courses => <CoursesItem courses={courses} key={courses.title}/>)}
       </ul>
       

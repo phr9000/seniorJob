@@ -1,9 +1,17 @@
 @import "src/assets/styles/abstracts/mixin";
 @import "src/assets/styles/abstracts/variables";
 
+.AvailCoursesComp {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.sec_cont {
+  margin-bottom: 2rem;
+}
 
 .sec_list {
-  padding: 1.5rem 0;
+  padding: 3rem 0;
   border-bottom: 1px solid #ccc;
 }
 
@@ -57,17 +65,66 @@
 }
 
 
-.courses_tit {
-  @include font(2rem, 600, $primary, 1.1);
-  word-wrap: break-word;
-  margin: 0.5rem 0;
-}
+// .courses_tit {
+//   @include font(2rem, 600, $primary, 1.1);
+//   word-wrap: break-word;
+//   margin: 0.5rem 0;
+// }
 
-.courses_desc {
+.course_desc {
   width: 100%;
   
   @include mobile {
     flex-direction: column-reverse;
+  }
+  
+  .courses_tit {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 5px 0;
+    color: $primary;
+    word-wrap: break-word;
+    line-height: 1.1;
+    
+    
+    @include desktop {
+      &.mo_ver {
+        display: none;
+      }
+    }
+    @include tablet_m {
+      &.mo_ver {
+        display: none;
+      }
+    }
+    
+    @include tablet {
+      &.mo_ver {
+        display: none;
+      }
+    }
+    
+    @include mobile {
+      font-size: 1.7rem;
+      &.pc_ver {
+        display: none;
+      }
+    }
+  }
+  
+  .courses_info {
+    width: 100%;
+    
+    @include tablet_m {
+      align-items: flex-start;
+    }
+    @include tablet {
+      align-items: flex-start;
+    }
+    @include mobile {
+      flex-direction: column-reverse;
+    }
+    
   }
   
   ul {
@@ -127,7 +184,7 @@
   }
 }
 
-.salary_area {
+.salary_area_avail {
   text-align: right;
   display: flex;
   align-items: center;
@@ -144,7 +201,11 @@
     justify-content: center;
     padding: 0 1.5rem;
     
-    &:first-child {
+    @include mobile {
+      &:first-child {
+        padding-left: 0;
+      }
+      
     }
   }
 }
