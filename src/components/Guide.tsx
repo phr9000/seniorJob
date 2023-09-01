@@ -24,12 +24,25 @@ interface BigBtnTitleProps {
   title?: string;
 }
 
+interface SecTitleDescProps {
+  desc?: string;
+}
+
 
 export function SecTitle ({title = "섹션제목"}: SecTitleProps) {
   return (
     <h2 className="sec_title">{title}</h2>
   );
 }
+
+export function SecTitleDesc ({desc = "We offer a variety of courses to help you advance in your career. Enrol now into a suitable course."}: SecTitleDescProps) {
+  return (
+    <p className="sec_title_desc">
+      {desc}
+    </p>
+  );
+}
+
 
 export function BigBtn ({title = "View All Jobs"}: BigBtnTitleProps) {
   return (
@@ -83,6 +96,8 @@ const Guide: React.FC = () => {
       <div style={{...commonStyle, ...fontSize30}}>[ Guide Page ]</div>
       <div style={{...commonStyle, ...fontSize20}}>[Section Titile]</div>
       <SecTitle/>
+      <div style={{...commonStyle, ...fontSize20}}>[Section Title Desc]</div>
+      <SecTitleDesc/>
       
       <div style={{...commonStyle, ...fontSize20}}>[btn Big]</div>
       <BigBtn/>
