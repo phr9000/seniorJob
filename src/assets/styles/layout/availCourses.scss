@@ -1,2 +1,242 @@
 @import "src/assets/styles/abstracts/mixin";
 @import "src/assets/styles/abstracts/variables";
+
+.AvailCoursesComp {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.sec_cont {
+  margin-bottom: 2rem;
+}
+
+.sec_list {
+  padding: 3rem 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.timetype_part_time {
+  @include flex(flex, center, center);
+  max-width: 100%;
+  width: 148px;
+  height: 34px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border-radius: 25px;
+  padding: 0.5rem 0.8rem;
+  text-align: center;
+  border: 1px solid #ffd2b2;
+  background-color: #ffd2b2;
+  color: #a74500;
+  
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+  
+  @include tablet_m {
+    margin-bottom: 1rem;
+  }
+  
+  @include tablet {
+    margin-bottom: 1rem;
+  }
+  
+  @include mobile {
+    width: 50%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+}
+
+.timetype_full_time {
+  @extend .timetype_part_time;
+  background-color: #a6ead2;
+  color: #0b6b49;
+  border: 1px solid #a6ead2;
+}
+
+.timetype_basic {
+  @extend .timetype_part_time;
+  background-color: transparent;
+  color: #007aff;
+  border: solid 1px #007aff;
+}
+
+.course_desc {
+  width: 100%;
+  
+  @include mobile {
+    flex-direction: column-reverse;
+  }
+  
+  .courses_tit {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 5px 0;
+    color: $primary;
+    word-wrap: break-word;
+    line-height: 1.1;
+    
+    
+    @include desktop {
+      &.mo_ver {
+        display: none;
+      }
+    }
+    @include tablet_m {
+      &.mo_ver {
+        display: none;
+      }
+    }
+    
+    @include tablet {
+      &.mo_ver {
+        display: none;
+      }
+    }
+    
+    @include mobile {
+      font-size: 1.7rem;
+      &.pc_ver {
+        display: none;
+      }
+    }
+  }
+  
+  .courses_info {
+    width: 100%;
+    
+    @include tablet_m {
+      align-items: flex-start;
+    }
+    @include tablet {
+      align-items: flex-start;
+    }
+    @include mobile {
+      flex-direction: column-reverse;
+    }
+  }
+  
+  ul {
+    margin-bottom: 2rem;
+    
+    @include tablet_m {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    li {
+      display: inline;
+      color: #333;
+      padding-right: 1rem;
+      
+      span.txt {
+        font-size: 1.6rem;
+        color: #333;
+      }
+      
+      &:not(:last-child) {
+        border-right: 1px solid #ccc;
+        
+        @include tablet_m {
+          border: none;
+        }
+        @include tablet {
+          border: none;
+        }
+        @include mobile {
+          border: none;
+        }
+      }
+      
+      &:not(:first-child) {
+        padding-left: 1rem;
+        
+        @include tablet_m {
+          padding-left: 0;
+        }
+        @include tablet {
+          padding-left: 0;
+        }
+        @include mobile {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.salary_area_avail {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  
+  @include mobile {
+    text-align: left;
+    padding-bottom: 1rem;
+  }
+  
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem;
+    
+    @include mobile {
+      &:first-child {
+        padding-left: 0;
+      }
+      
+    }
+  }
+}
+
+.salary {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #333;
+  text-transform: uppercase;
+  
+  @include mobile {
+    @include flex(flex, null, center);
+  }
+  
+  .data_salary {
+    font-size: 2.4rem;
+    font-weight: 900;
+    
+    @include tablet_m {
+      display: block;
+      margin-left: 0;
+    }
+    @include tablet {
+      display: block;
+      margin-left: 0;
+    }
+    @include mobile {
+      display: block;
+    }
+  }
+}
+
+.salperiod {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #777;
+  text-align: end;
+  
+  @include mobile {
+    text-align: left;
+  }
+}

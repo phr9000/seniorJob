@@ -8,6 +8,7 @@ import imgs from "src/common/ImgDef";
 
 /* Import Component */
 import {JobItem} from 'src/components/LatestList';
+import {CoursesItem} from "src/components/AvailCourses";
 
 
 
@@ -91,20 +92,37 @@ const Guide: React.FC = () => {
     period: "per month"
   };
   
+  const someCoursesData = {
+    postedOn: "",
+    timeTypes: [
+      {type: "Basic", icon: "fas fa-certificate"},
+      {type: "Full Time", icon: "fas fa-hourglass-half"},
+    ],
+    title: "Fashion Retail Assistant (Part-Time)",
+    day: "2 Days",
+    location: "Grant/Subsidies: SkillsFuture Credit,NSA Subsidy",
+    calendar: "From to",
+    salary: "$450",
+    salary2: "$40",
+    fullFee: "FULL FEE",
+    nettlFee: "NETT FEE",
+  }
+  
   return (
     <div style={styelMargin}>
       <div style={{...commonStyle, ...fontSize30}}>[ Guide Page ]</div>
       <div style={{...commonStyle, ...fontSize20}}>[Section Titile]</div>
-      <SecTitle/>
+      <SecTitle title="section title"/>
       <div style={{...commonStyle, ...fontSize20}}>[Section Title Desc]</div>
-      <SecTitleDesc/>
+      <SecTitleDesc desc="section desc"/>
       
       <div style={{...commonStyle, ...fontSize20}}>[btn Big]</div>
       <BigBtn/>
       
       <div style={{...commonStyle, ...fontSize20}}>[Latest List Item]</div>
       <JobItem job={someJobData}/>
-      
+      <div style={{...commonStyle, ...fontSize20}}>[Available Courses List Item]</div>
+      <CoursesItem courses={someCoursesData}/>
       <div style={{...commonStyle, ...fontSize20}}>[button component]</div>
       <Button label="라벨ㄹㄹㄹ" color="red"/>
     </div>

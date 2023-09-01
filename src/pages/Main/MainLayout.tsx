@@ -3,6 +3,7 @@ import React from "react";
 
 /* Import Component */
 import LatestList from "src/components/LatestList";
+import AvailCourses from "src/components/AvailCourses";
 import NeedHelp from "src/pages/Main/needhelp/NeedHelp";
 
 
@@ -50,10 +51,16 @@ const MainLayout: React.FC = () => {
           </div>
         </div>
       </section>
+      
       <section className="latestListComp">
         <LatestList/>
       </section>
+      
       <NeedHelp/>
+      
+      <section className="AvailCoursesComp">
+        <AvailCourses/>
+      </section>
     </main>
   );
 };

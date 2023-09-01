@@ -110,7 +110,7 @@ const LatestList: React.FC = () => {
   return (
     <div className="section_inner">
       <SecTitle title="Latest Jobs"/>
-      <ul>
+      <ul className="sec_cont">
         {jobList.map(job => <JobItem job={job} key={job.title}/>)}
       </ul>
       <BigBtn title="View All Jobs"/>
