@@ -7,6 +7,18 @@ footer {
     width: 1170px;
     margin: 0 auto;
     
+    @include tablet_m {
+      width: 970px;
+    }
+    @include tablet {
+      width: 750px;
+      
+    }
+    @include mobile {
+      width: 100%;
+      flex-direction: column;
+    }
+    
     .copy_area {
       @include font(16px, 600, #333);
       padding: 0 1.5rem
@@ -17,10 +29,19 @@ footer {
       @include flex(flex, center, center);
       
       li {
+        @include flex(flex, center, center);
+        flex-shrink: 0;
+        
         a {
+          display: inline-block;
           @include font(1.6rem, 900, #000);
           padding: 5px;
           word-break: keep-all;
+          transition: all 0.3s;
+          
+          &:hover {
+            color: #007aff;
+          }
           
           i {
             color: #3b5998;
@@ -29,10 +50,12 @@ footer {
         
         &:not(:last-child) {
           &:after {
+            display: inline-block;
             content: "•";
             font-size: 1.2rem;
             vertical-align: middle;
             color: #777;
+            margin-top: 4px;
           }
         }
         
