@@ -13,6 +13,7 @@ import SubBanner from "src/components/banner/SubBanner";
 import Button from "src/components/button/Button"
 import SponsorBanner from "src/components/banner/SponsorBanner";
 import SelectBoxChk from "src/components/select/SelectBoxChk";
+import SelectBoxBasic from "src/components/select/SelectBoxBasic";
 
 
 
@@ -153,9 +154,13 @@ const Guide: React.FC = () => {
         <SponsorBanner/>
       </section>
       
-      {/* 08.Sponsor Banner */}
+      {/* 08.Select Box Check Style */}
       <div style={{...commonStyle, ...fontSize20}}>[ 08.SelectBoxChk ]</div>
       <SelectBoxChk/>
+      
+      {/* 08.Select Box Basic Style */}
+      <div style={{...commonStyle, ...fontSize20}}>[ 09.SelectBoxBasic ]</div>
+      <SelectBoxBasic/>
     
     </div>
   );

@@ -9,7 +9,7 @@ import Guide from "src/components/Guide";
 // import LatestList from "src/components/LatestList";
 // import Button from "src/components/button/Button";
 // import AvailCoursrs from "src/components/AvailCourses";
-// import SelectBoxBasic from "src/components/select/SelectBoxBasic";
+import SelectBoxBasic from "src/components/select/SelectBoxBasic";
 import SelectBoxChk from "src/components/select/SelectBoxChk";
 
 
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       // {path: "/latest-list", element: <LatestList/>},
       // {path: "/button", element: <Button/>},
       // {path: "/avail_course", element: <AvailCoursrs/>},
-      // {path: "/SelectBoxBasic", element: <SelectBoxBasic/>},
+      {path: "/SelectBoxBasic", element: <SelectBoxBasic/>},
       {path: "/SelectBoxChk", element: <SelectBoxChk/>},
     ],
   },

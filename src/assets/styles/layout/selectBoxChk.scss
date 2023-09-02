@@ -2,7 +2,7 @@
 @import "src/assets/styles/abstracts/variables";
 
 .dropdown_area {
-  &.select_basic {
+  &.select_chk {
     width: 50%;
     
     .dropdown_label {
@@ -39,6 +39,17 @@
         ._item {
           margin-bottom: 1.5rem;
           
+          :hover {
+            .__txt {
+              cursor: pointer;
+              color: #3428c9;
+            }
+            
+            .__custom_chk {
+              border-color: #3428c9;
+            }
+          }
+          
           label {
             @include flex(flex, flex-start, center);
             
@@ -71,12 +82,14 @@
               border: 0.2rem solid #ccc;
               border-radius: 3px;
               background-color: #fff;
+              transition: all 0.3s;
             }
             
             .__txt {
               display: inline-block;
               @include font(1.6rem, 600, #777, null);
               margin-left: 0.5rem;
+              transition: all 0.3s;
             }
           }
         }
