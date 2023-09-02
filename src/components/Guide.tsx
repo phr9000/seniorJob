@@ -9,6 +9,7 @@ import imgs from "src/common/ImgDef";
 /* Import Component */
 import {JobItem} from 'src/components/LatestList';
 import {CoursesItem} from "src/components/AvailCourses";
+import SubBanner from "src/components/banner/SubBanner";
 
 
 
@@ -44,7 +45,6 @@ export function SecTitleDesc ({desc = "We offer a variety of courses to help you
   );
 }
 
-
 export function BigBtn ({title = "View All Jobs"}: BigBtnTitleProps) {
   return (
     <div className="big_btn">
@@ -59,18 +59,20 @@ export function BigBtn ({title = "View All Jobs"}: BigBtnTitleProps) {
 const Guide: React.FC = () => {
   // 가이드 모듈타이틀에 대한 스타일
   const commonStyle: React.CSSProperties = {
-    fontWeight: '700',
+    fontWeight: '600',
     backgroundColor: 'lightblue',
     marginTop: '20px',
     marginBottom: '20px',
   }
   const fontSize30: React.CSSProperties = {
     fontSize: '30px',
+    fontWeight: '900',
     padding: '10px 0',
     textAlign: "center"
   }
   const fontSize20: React.CSSProperties = {
     fontSize: '20px',
+    fontWeight: '800',
     padding: '10px 0',
     backgroundColor: 'gold',
     textIndent: '30px',
@@ -111,20 +113,22 @@ const Guide: React.FC = () => {
   return (
     <div style={styelMargin}>
       <div style={{...commonStyle, ...fontSize30}}>[ Guide Page ]</div>
-      <div style={{...commonStyle, ...fontSize20}}>[Section Titile]</div>
+      <div style={{...commonStyle, ...fontSize20}}>[ 00.Section Titile ]</div>
       <SecTitle title="section title"/>
-      <div style={{...commonStyle, ...fontSize20}}>[Section Title Desc]</div>
+      <div style={{...commonStyle, ...fontSize20}}>[ 01.Section Title Desc ]</div>
       <SecTitleDesc desc="section desc"/>
       
-      <div style={{...commonStyle, ...fontSize20}}>[btn Big]</div>
+      <div style={{...commonStyle, ...fontSize20}}>[ 03.btn Big ]</div>
       <BigBtn/>
       
-      <div style={{...commonStyle, ...fontSize20}}>[Latest List Item]</div>
+      <div style={{...commonStyle, ...fontSize20}}>[ 04.Latest List Item ]</div>
       <JobItem job={someJobData}/>
-      <div style={{...commonStyle, ...fontSize20}}>[Available Courses List Item]</div>
+      <div style={{...commonStyle, ...fontSize20}}>[ 05.Available Courses List Item ]</div>
       <CoursesItem courses={someCoursesData}/>
-      <div style={{...commonStyle, ...fontSize20}}>[button component]</div>
+      <div style={{...commonStyle, ...fontSize20}}>[ 06.button component ]</div>
       <Button label="라벨ㄹㄹㄹ" color="red"/>
+      <div style={{...commonStyle, ...fontSize20}}>[ 07.Sub Banner ]</div>
+      <SubBanner/>
     </div>
   );
 };

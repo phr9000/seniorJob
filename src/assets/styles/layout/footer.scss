@@ -11,8 +11,8 @@ footer {
       width: 940px;
     }
     @include tablet {
-      width: 720px;
-      
+      width: 100%;
+      flex-direction: column;
     }
     @include mobile {
       width: 100%;
@@ -20,14 +20,21 @@ footer {
     }
     
     .copy_area {
-      @include font(16px, 600, #333);
-      padding: 0 1.5rem
-      
+      @include font(16px, 600, #333, 1.4);
+      padding: 0 1.5rem;
+      @include mobile {
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
     }
     
     .ft_links {
       @include flex(flex, center, center);
       padding: 0 2rem;
+      
+      @include mobile {
+        flex-wrap: wrap;
+      }
       
       li {
         @include flex(flex, center, center);
