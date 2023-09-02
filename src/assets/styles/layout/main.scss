@@ -90,6 +90,7 @@ main {
   }
 }
 
+// section common
 .sec_title {
   font-size: 2.6rem;
   font-weight: 600;
@@ -105,6 +106,7 @@ main {
   margin-bottom: 1rem;
 }
 
+// big btn
 .big_btn {
   padding-top: 2rem;
   
@@ -206,46 +208,76 @@ main {
   }
 }
 
-// SubBanner
-.SbuBannerComp {
+
+// SubBanner == In progress by Hong
+.SubBannerComp {
   background-image: linear-gradient(82deg, #3428c9, #b40000 100%);
   min-height: 160px;
+  margin-top: 3rem;
   
   .section_inner {
-    padding: 2rem 0 4rem;
-    
-    h2 {
-      @include font(2.6rem, 600, #fff, 1.1);
-      margin: 2rem 0 1rem;
-      font-family: 'Poppins', sans-serif;
-    }
-    
-    p {
-      @include font(1.6rem, 600, #fff, 1.1);
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    
-    .big_btn {
-      padding-top: 0;
-      @include mobile {
-        padding: 0 1.5rem;
+    &.sub_banner {
+      padding: 2rem 0 4rem;
+      
+      h2 {
+        @include font(2.6rem, 600, #fff, 1.1);
+        margin: 2rem 0 1rem;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
       }
       
-      a {
-        width: 360px;
-        height: 4.4rem;
-        margin: 0 auto;
-        background-color: #fff;
-        color: #3428c9;
-        
+      p {
+        @include font(1.6rem, 600, #fff, 1.4);
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      
+      .big_btn {
+        padding-top: 0;
         @include mobile {
-          width: 100%;
-          padding: 0 1rem;
-          line-height: 44px;
+          padding: 0 1.5rem;
+        }
+        
+        a {
+          width: 36rem;
+          height: 4.4rem;
+          margin: 0 auto;
+          background-color: #fff;
+          color: #3428c9;
           
+          @include mobile {
+            width: 100%;
+            padding: 0 1rem;
+            line-height: 44px;
+            
+          }
         }
       }
     }
   }
 }
+
+// Sponsor Banner == In progress by Hong
+.SponsorBannerComp {
+  .section_inner {
+    &.sponsor_banner {
+      padding: 3rem 0;
+      
+      p {
+        @include font(1.2rem, 600, #777,);
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+      
+      figure {
+        width: auto;
+        
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+

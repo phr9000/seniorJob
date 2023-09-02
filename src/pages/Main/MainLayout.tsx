@@ -6,6 +6,7 @@ import LatestList from "src/components/LatestList";
 import AvailCourses from "src/components/AvailCourses";
 import NeedHelp from "src/pages/Main/needhelp/NeedHelp";
 import SubBanner from "src/components/banner/SubBanner";
+import SponsorBanner from "src/components/banner/SponsorBanner";
 
 
 
@@ -62,8 +63,11 @@ const MainLayout: React.FC = () => {
       <section className="AvailCoursesComp">
         <AvailCourses/>
       </section>
-      <section className="SbuBannerComp">
+      <section className="SubBannerComp">
         <SubBanner/>
+      </section>
+      <section className="SponsorBannerComp">
+        <SponsorBanner/>
       </section>
     </main>
   );

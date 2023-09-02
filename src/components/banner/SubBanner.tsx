@@ -12,7 +12,7 @@ import {BigBtn} from "src/components/Guide";
 
 const SubBanner: React.FC = () => {
   return (
-    <div className="section_inner">
+    <div className="section_inner sub_banner">
       <h2>Don’t have an account? Sign up now.</h2>
       <p>
         Apply and save jobs easily with an account.

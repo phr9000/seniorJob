@@ -1,15 +1,17 @@
 /* eslint-disable */
 import {Link} from "react-router-dom";
 import React from "react";
-import Button from "src/components/button/Button"
 
 /* Import imgs */
 import imgs from "src/common/ImgDef";
+
 
 /* Import Component */
 import {JobItem} from 'src/components/LatestList';
 import {CoursesItem} from "src/components/AvailCourses";
 import SubBanner from "src/components/banner/SubBanner";
+import Button from "src/components/button/Button"
+import SponsorBanner from "src/components/banner/SponsorBanner";
 
 
 
@@ -113,22 +115,42 @@ const Guide: React.FC = () => {
   return (
     <div style={styelMargin}>
       <div style={{...commonStyle, ...fontSize30}}>[ Guide Page ]</div>
+      
+      {/* 00.Section Titile */}
       <div style={{...commonStyle, ...fontSize20}}>[ 00.Section Titile ]</div>
       <SecTitle title="section title"/>
+      
+      {/* 01.Section Title Desc */}
       <div style={{...commonStyle, ...fontSize20}}>[ 01.Section Title Desc ]</div>
       <SecTitleDesc desc="section desc"/>
       
-      <div style={{...commonStyle, ...fontSize20}}>[ 03.btn Big ]</div>
+      {/* 02.btn Big*/}
+      <div style={{...commonStyle, ...fontSize20}}>[ 02.btn Big ]</div>
       <BigBtn/>
       
-      <div style={{...commonStyle, ...fontSize20}}>[ 04.Latest List Item ]</div>
+      {/* 03.Latest List Item */}
+      <div style={{...commonStyle, ...fontSize20}}>[ 03.Latest List Item ]</div>
       <JobItem job={someJobData}/>
-      <div style={{...commonStyle, ...fontSize20}}>[ 05.Available Courses List Item ]</div>
+      
+      {/* 04.Available Courses List Item */}
+      <div style={{...commonStyle, ...fontSize20}}>[ 04.Available Courses List Item ]</div>
       <CoursesItem courses={someCoursesData}/>
-      <div style={{...commonStyle, ...fontSize20}}>[ 06.button component ]</div>
+      
+      {/* 05.button component */}
+      <div style={{...commonStyle, ...fontSize20}}>[ 05.button component ]</div>
       <Button label="라벨ㄹㄹㄹ" color="red"/>
-      <div style={{...commonStyle, ...fontSize20}}>[ 07.Sub Banner ]</div>
-      <SubBanner/>
+      
+      {/* 06.Sub Banner */}
+      <div style={{...commonStyle, ...fontSize20}}>[ 06.Sub Banner ]</div>
+      <section className="SubBannerComp">
+        <SubBanner/>
+      </section>
+      
+      {/* 07.Sponsor Banner */}
+      <div style={{...commonStyle, ...fontSize20}}>[ 07.Sponsor Banner ]</div>
+      <section className="SponsorBannerComp">
+        <SponsorBanner/>
+      </section>
     </div>
   );
 };
