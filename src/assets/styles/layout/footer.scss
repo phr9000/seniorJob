@@ -8,10 +8,10 @@ footer {
     margin: 0 auto;
     
     @include tablet_m {
-      width: 970px;
+      width: 940px;
     }
     @include tablet {
-      width: 750px;
+      width: 720px;
       
     }
     @include mobile {
@@ -27,6 +27,7 @@ footer {
     
     .ft_links {
       @include flex(flex, center, center);
+      padding: 0 2rem;
       
       li {
         @include flex(flex, center, center);
