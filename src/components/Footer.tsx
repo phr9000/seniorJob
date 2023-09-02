@@ -17,19 +17,19 @@ const Footer: React.FC = () => {
         </div>
         <ul className="ft_links">
           <li>
-            <a href="#none">About Us</a>
+            <a href="#none" title="About Us">About Us</a>
           </li>
           <li>
-            <a href="#none">Disclaimer</a>
+            <a href="#none" title="Disclaimer">Disclaimer</a>
           </li>
           <li>
-            <a href="#none">Privacy Policy</a>
+            <a href="#none" title="Privacy Policy">Privacy Policy</a>
           </li>
           <li>
-            <a href="#none">Terms & Condition</a>
+            <a href="#none" title="Terms & Condition">Terms & Condition</a>
           </li>
           <li>
-            <a href="#none">
+            <a href="#none" title="face book">
               <i className="fab fa-facebook-f"></i>
             </a>
           </li>
