@@ -1,0 +1,86 @@
+@import "src/assets/styles/abstracts/mixin";
+@import "src/assets/styles/abstracts/variables";
+
+.dropdown_area {
+  &.select_basic {
+    width: 50%;
+    
+    .dropdown_label {
+      width: 100%;
+      @include flex(flex, space-between, center);
+      padding: 1.2rem;
+      border: 1px solid #ddd;
+      border-radius: 0.4rem;
+      
+      ._label {
+        @include font(1.6rem, 600, rgb(119, 119, 119), null);
+      }
+      
+      ._arrow_icon {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        color: #b40000;
+        border-top: 4px dashed;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+      }
+    }
+    
+    
+    .dropdown_menu {
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 0.4rem;
+      margin-top: 0.2rem;
+      
+      ul {
+        padding: 1rem 1.5rem;
+        
+        ._item {
+          margin-bottom: 1.5rem;
+          
+          label {
+            @include flex(flex, flex-start, center);
+            
+            .hiddenCheckbox {
+              display: none;
+            }
+            
+            .hiddenCheckbox:checked + .__custom_chk {
+              background-color: #3428c9;
+              border: 0.2rem solid #3428c9;
+              
+              &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 8px;
+                top: 3px;
+                width: 6px;
+                height: 14px;
+                border: solid #fff;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+              }
+            }
+            
+            .__custom_chk {
+              position: relative;
+              width: 2.6rem;
+              height: 2.6rem;
+              border: 0.2rem solid #ccc;
+              border-radius: 3px;
+              background-color: #fff;
+            }
+            
+            .__txt {
+              display: inline-block;
+              @include font(1.6rem, 600, #777, null);
+              margin-left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

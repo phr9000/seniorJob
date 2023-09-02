@@ -2,7 +2,7 @@
 import React, {useState} from "react";
 
 /* Import SCSS */
-import "src/assets/styles/layout/selectBoxBasic.scss";
+import "src/assets/styles/layout/selectBoxChk.scss";
 
 
 // Dropdown에 표시될 항목들
