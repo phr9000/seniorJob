@@ -12,6 +12,7 @@ import {CoursesItem} from "src/components/AvailCourses";
 import SubBanner from "src/components/banner/SubBanner";
 import Button from "src/components/button/Button"
 import SponsorBanner from "src/components/banner/SponsorBanner";
+import SelectBoxChk from "src/components/select/SelectBoxChk";
 
 
 
@@ -151,6 +152,11 @@ const Guide: React.FC = () => {
       <section className="SponsorBannerComp">
         <SponsorBanner/>
       </section>
+      
+      {/* 08.Sponsor Banner */}
+      <div style={{...commonStyle, ...fontSize20}}>[ 08.SelectBoxChk ]</div>
+      <SelectBoxChk/>
+    
     </div>
   );
 };

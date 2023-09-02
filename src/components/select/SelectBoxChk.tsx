@@ -29,33 +29,35 @@ const SelectBoxChk: React.FC = () => {
   
   // 체크박스 항목을 클릭할 때의 처리 함수
   const handleItemClick = (item: string) => (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newSelectedItems: string[] = [ ...selectedItems ];
+    let newSelectedItems: string[] = [ ...selectedItems ];
     
-    // "All" 항목을 클릭한 경우의 처리
     if (item === "All") {
-      setSelectedItems(e.target.checked ? [ "All" ] : []);
+      if (e.target.checked) {
+        newSelectedItems = [ "All" ];
+      } else {
+        newSelectedItems = newSelectedItems.filter(i => i !== "All");
+      }
     } else {
       const isAlreadySelected = newSelectedItems.includes(item);
       if (isAlreadySelected) {
-        newSelectedItems.splice(newSelectedItems.indexOf(item), 1);
+        newSelectedItems = newSelectedItems.filter(i => i !== item);
       } else {
         newSelectedItems.push(item);
       }
-      
-      // "All"이 이미 선택되어 있는 경우 삭제
-      if (newSelectedItems.includes("All")) {
-        newSelectedItems.splice(newSelectedItems.indexOf("All"), 1);
-      }
-      
-      setSelectedItems(newSelectedItems);
+      // 'All'과 다른 항목을 동시에 선택할 수 없으므로, 다른 항목을 선택했을 때 'All'을 선택 항목에서 제거
+      newSelectedItems = newSelectedItems.filter(i => i !== "All");
     }
     
-    // 항목의 색상 변경
-    if (e.target.checked) {
-      handleItemColorChange(item);
-    } else {
-      handleItemColorRevert(item);
-    }
+    // 색상 설정
+    const newColors: Record<string, React.CSSProperties> = {};
+    newSelectedItems.forEach(i => {
+      newColors[i] = {
+        color: '#3428c9'
+      };
+    });
+    setItemColors(newColors);
+    
+    setSelectedItems(newSelectedItems);
   };
   
   
