@@ -2,17 +2,17 @@
 import React, {useState} from "react";
 
 /* Import SCSS */
-import "src/assets/styles/layout/selectBoxBasic.scss";
+import "src/assets/styles/layout/selectBoxChk.scss";
 
 
-// Dropdown에 표시될 항목들
+// Dropdown에 표시될 아이템 배열
 const ITEMS = [ "All", "Part Time", "Full Time", "Contract" ];
 
 const SelectBoxChk: React.FC = () => {
   
   // Dropdown이 열려있는지 여부를 저장하는 상태
   const [ isOpen, setIsOpen ] = useState(false);
-  // 선택된 항목들을 저장하는 상태
+  // 선택된 아이템들을 저장하는 상태
   const [ selectedItems, setSelectedItems ] = useState<string[]>([]);
   
   // label의 스타일을 관리하는 상태 (색상 변경을 위함)
@@ -21,7 +21,7 @@ const SelectBoxChk: React.FC = () => {
   const [ itemColors, setItemColors ] = useState<Record<string, React.CSSProperties>>({});
   
   
-  // Dropdown을 열고 닫는 함수
+  // Dropdown을 열고 닫는 엑션 함수
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
@@ -88,13 +88,8 @@ const SelectBoxChk: React.FC = () => {
   };
   
   
-  // Dropdown의 상단 여백 설정
-  const margin = {
-    marginTop: '10rem',
-  };
-  
   return (
-    <div className="dropdown_area select_basic" style={margin}>
+    <div className="dropdown_area select_chk">
       <button type="button" className="dropdown_label" onClick={toggleDropdown}>
         <span className="_label" style={labelStyle}>
           {selectedItems.includes("All")
