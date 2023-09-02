@@ -244,12 +244,12 @@ main {
           margin: 0 auto;
           background-color: #fff;
           color: #3428c9;
+          font-weight: 600;
           
           @include mobile {
             width: 100%;
             padding: 0 1rem;
             line-height: 44px;
-            
           }
         }
       }
