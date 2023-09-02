@@ -20,7 +20,7 @@ const coursesList = [
       {type: "Basic", icon: "fas fa-certificate"},
       {type: "Full Time", icon: "fas fa-hourglass-half"},
     ],
-    title: "Fashion Retail Assistant (Part-Time)",
+    title: "Basics of Elder Caregiving Skills (Mandarin)",
     day: "2 Days",
     location: "Grant/Subsidies: SkillsFuture Credit,NSA Subsidy",
     calendar: "From to",
@@ -36,7 +36,7 @@ const coursesList = [
       {type: "Basic", icon: "fas fa-certificate"},
       {type: "Full Time", icon: "fas fa-hourglass-half"},
     ],
-    title: "Fashion Retail Assistant (Part-Time)",
+    title: "Entrepreneurship: Build your Business Model and Deliver a Winning Pitch",
     day: "1 Days",
     location: "Grant/Subsidies: SkillsFuture Credit,NSA Subsidy",
     calendar: "From 22-Jun-2023 to 23-Jun-2023",
@@ -45,12 +45,27 @@ const coursesList = [
     fullFee: "FULL FEE",
     nettlFee: "NETT FEE",
   },
+  {
+    postedOn: "",
+    timeTypes: [
+      {type: "Basic", icon: "fas fa-certificate"},
+      {type: "Full Time", icon: "fas fa-hourglass-half"},
+    ],
+    title: "Training For Befrienders (English)",
+    day: "1 Days",
+    location: "Grant/Subsidies: SkillsFuture Credit,NSA Subsidy",
+    calendar: "From 08-Jun-2023 to 08-Jun-2023",
+    salary: "$150",
+    salary2: "$30",
+    fullFee: "FULL FEE",
+    nettlFee: "NETT FEE",
+  },
 
 ];
 
 export const CoursesItem: React.FC<{ courses: typeof coursesList[0] }> = ({courses}) => (
   <li className="sec_list">
-    <a href="#" className="add_links flex">
+    <a href="#none" className="add_links flex">
       <div className="text_area">
         <div className="row flex justify-between">
           <span className="posted_on">
