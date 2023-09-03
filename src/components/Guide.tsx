@@ -1,14 +1,18 @@
 /* eslint-disable */
 import { Link } from "react-router-dom";
 import React from "react";
-import Button from "src/components/button/Button";
-import Input from "src/components/input/TextInput";
 
 /* Import imgs */
 import imgs from "src/common/ImgDef";
 
 /* Import Component */
 import { JobItem } from "src/components/LatestList";
+import { CoursesItem } from "src/components/AvailCourses";
+import SubBanner from "src/components/banner/SubBanner";
+import Button from "src/components/button/Button";
+import SponsorBanner from "src/components/banner/SponsorBanner";
+import SelectBoxChk from "src/components/select/SelectBoxChk";
+import SelectBoxBasic from "src/components/select/SelectBoxBasic";
 
 interface SecTitleProps {
   /**
@@ -22,8 +26,18 @@ interface BigBtnTitleProps {
   title?: string;
 }
 
+interface SecTitleDescProps {
+  desc?: string;
+}
+
 export function SecTitle({ title = "섹션제목" }: SecTitleProps) {
   return <h2 className="sec_title">{title}</h2>;
+}
+
+export function SecTitleDesc({
+  desc = "We offer a variety of courses to help you advance in your career. Enrol now into a suitable course.",
+}: SecTitleDescProps) {
+  return <p className="sec_title_desc">{desc}</p>;
 }
 
 export function BigBtn({ title = "View All Jobs" }: BigBtnTitleProps) {
@@ -45,17 +59,21 @@ const Guide: React.FC = () => {
     marginTop: "20px",
     marginBottom: "20px",
   };
+
   const fontSize30: React.CSSProperties = {
     fontSize: "30px",
+    fontWeight: "900",
     padding: "10px 0",
     textAlign: "center",
   };
   const fontSize20: React.CSSProperties = {
     fontSize: "20px",
+    fontWeight: "800",
     padding: "10px 0",
     backgroundColor: "gold",
     textIndent: "30px",
   };
+
   const styelMargin = {
     marginTop: "80px",
   };
@@ -73,23 +91,77 @@ const Guide: React.FC = () => {
     period: "per month",
   };
 
+  const someCoursesData = {
+    postedOn: "",
+    timeTypes: [
+      { type: "Basic", icon: "fas fa-certificate" },
+      { type: "Full Time", icon: "fas fa-hourglass-half" },
+    ],
+    title: "Fashion Retail Assistant (Part-Time)",
+    day: "2 Days",
+    location: "Grant/Subsidies: SkillsFuture Credit,NSA Subsidy",
+    calendar: "From to",
+    salary: "$450",
+    salary2: "$40",
+    fullFee: "FULL FEE",
+    nettlFee: "NETT FEE",
+  };
+
   return (
     <div style={styelMargin}>
       <div style={{ ...commonStyle, ...fontSize30 }}>[ Guide Page ]</div>
-      <div style={{ ...commonStyle, ...fontSize20 }}>[Section Titile]</div>
-      <SecTitle />
 
-      <div style={{ ...commonStyle, ...fontSize20 }}>[btn Big]</div>
+      {/* 00.Section Titile */}
+      <div style={{ ...commonStyle, ...fontSize20 }}>[ 00.Section Titile ]</div>
+      <SecTitle title="section title" />
+
+      {/* 01.Section Title Desc */}
+      <div style={{ ...commonStyle, ...fontSize20 }}>
+        [ 01.Section Title Desc ]
+      </div>
+      <SecTitleDesc desc="section desc" />
+
+      {/* 02.btn Big*/}
+      <div style={{ ...commonStyle, ...fontSize20 }}>[ 02.btn Big ]</div>
       <BigBtn />
 
-      <div style={{ ...commonStyle, ...fontSize20 }}>[Latest List Item]</div>
+      {/* 03.Latest List Item */}
+      <div style={{ ...commonStyle, ...fontSize20 }}>
+        [ 03.Latest List Item ]
+      </div>
       <JobItem job={someJobData} />
 
-      <div style={{ ...commonStyle, ...fontSize20 }}>[button component]</div>
-      <Button label="버튼내용" color="red" />
+      {/* 04.Available Courses List Item */}
+      <div style={{ ...commonStyle, ...fontSize20 }}>
+        [ 04.Available Courses List Item ]
+      </div>
+      <CoursesItem courses={someCoursesData} />
 
-      <div style={{ ...commonStyle, ...fontSize20 }}>[input component]</div>
-      <Input placeholder="Job Title, Company Name, Keyword" />
+      {/* 05.button component */}
+      <div style={{ ...commonStyle, ...fontSize20 }}>
+        [ 05.button component ]
+      </div>
+      <Button label="라벨ㄹㄹㄹ" color="red" />
+
+      {/* 06.Sub Banner */}
+      <div style={{ ...commonStyle, ...fontSize20 }}>[ 06.Sub Banner ]</div>
+      <section className="SubBannerComp">
+        <SubBanner />
+      </section>
+
+      {/* 07.Sponsor Banner */}
+      <div style={{ ...commonStyle, ...fontSize20 }}>[ 07.Sponsor Banner ]</div>
+      <section className="SponsorBannerComp">
+        <SponsorBanner />
+      </section>
+
+      {/* 08.Select Box Check Style */}
+      <div style={{ ...commonStyle, ...fontSize20 }}>[ 08.SelectBoxChk ]</div>
+      <SelectBoxChk />
+
+      {/* 08.Select Box Basic Style */}
+      <div style={{ ...commonStyle, ...fontSize20 }}>[ 09.SelectBoxBasic ]</div>
+      <SelectBoxBasic />
     </div>
   );
 };

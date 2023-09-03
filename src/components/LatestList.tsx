@@ -52,7 +52,7 @@ const jobList = [
 
 export const JobItem: React.FC<{ job: typeof jobList[0] }> = ({job}) => (
   <li className="sec_list">
-    <a href="#" className="add_links flex">
+    <a href="#none" className="add_links flex">
       <div className="thumb_area shrink-0">
         <img src={job.thumb} alt=""/>
       </div>
@@ -110,7 +110,7 @@ const LatestList: React.FC = () => {
   return (
     <div className="section_inner">
       <SecTitle title="Latest Jobs"/>
-      <ul>
+      <ul className="sec_cont">
         {jobList.map(job => <JobItem job={job} key={job.title}/>)}
       </ul>
       <BigBtn title="View All Jobs"/>

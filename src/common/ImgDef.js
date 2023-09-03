@@ -7,6 +7,7 @@
 /* ++++++ Load image path ++++++ */
 import thumb_01 from "src/assets/imgs/thumb_01.png";
 import needHelp_01 from "src/assets/imgs/need_help01.jpg";
+import logo_fastjobs from "src/assets/imgs/logo_fastjobs.png";
 // ..추가가능
 
 
@@ -14,6 +15,7 @@ import needHelp_01 from "src/assets/imgs/need_help01.jpg";
 const imgs = {
   thumb_01: thumb_01,
   needHelp_01: needHelp_01,
+  logo_fastjobs: logo_fastjobs,
   // ..추가 가능
   
   
