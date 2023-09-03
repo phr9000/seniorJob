@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import "src/assets/styles/base/input.scss";
 interface InputExampleProps {
-  inputClassName: 'btn' | 'pink';
-  value: string;
-  placeholder: string;
+  inputClassName?: "input" | "pink";
+  value?: string | "";
+  placeholder?: string;
 }
 
-const InputExample: React.FC<InputExampleProps> = ({ inputClassName, value, placeholder }) => {
+const InputExample: React.FC<InputExampleProps> = ({
+  inputClassName = "btn",
+  value = "",
+  placeholder,
+}) => {
+  let [isInputClicked, setIsInputClicked] = useState(false);
   const [inputValue, setInputValue] = useState(value);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -18,9 +23,15 @@ const InputExample: React.FC<InputExampleProps> = ({ inputClassName, value, plac
       <input
         type="text"
         value={inputValue}
-        className={inputClassName} 
-        placeholder={placeholder} 
+        className={inputClassName}
+        placeholder={isInputClicked === true ? "" : placeholder}
         onChange={handleInputChange}
+        onFocus={() => {
+          setIsInputClicked(true);
+        }}
+        onBlur={() => {
+          setIsInputClicked(false);
+        }}
       />
     </div>
   );
