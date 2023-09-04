@@ -13,6 +13,7 @@ import Button from "src/components/button/Button";
 import SponsorBanner from "src/components/banner/SponsorBanner";
 import SelectBoxChk from "src/components/select/SelectBoxChk";
 import SelectBoxBasic from "src/components/select/SelectBoxBasic";
+import Input from "./input/TextInput";
 
 interface SecTitleProps {
   /**
@@ -162,6 +163,10 @@ const Guide: React.FC = () => {
       {/* 08.Select Box Basic Style */}
       <div style={{ ...commonStyle, ...fontSize20 }}>[ 09.SelectBoxBasic ]</div>
       <SelectBoxBasic />
+
+      {/* 09.Input Basic Style */}
+      <div style={{ ...commonStyle, ...fontSize20 }}>[ 10.InputBasic ]</div>
+      <Input placeholder="test" />
     </div>
   );
 };
