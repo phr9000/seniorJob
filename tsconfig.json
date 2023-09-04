@@ -18,10 +18,8 @@
     "baseUrl": "./",
     "paths": {
       "src/*": ["src/*"]
-    }
+    },
+    "noUnusedLocals": false
   },
-  "include": ["src"],
-  "rules": {
-    "no-unused-vars": "off"
-  }
+  "include": ["src"]
 }
