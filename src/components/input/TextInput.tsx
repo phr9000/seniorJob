@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "src/assets/styles/base/input.scss";
 interface InputExampleProps {
-  inputClassName?: "input" | "pink";
+  inputClassName?: "pink";
   value?: string | "";
   placeholder?: string;
 }
 
 const InputExample: React.FC<InputExampleProps> = ({
-  inputClassName = "btn",
+  inputClassName = "input",
   value = "",
   placeholder,
 }) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "src/App.css";
 
@@ -12,27 +12,24 @@ import Guide from "src/components/Guide";
 import SelectBoxBasic from "src/components/select/SelectBoxBasic";
 import SelectBoxChk from "src/components/select/SelectBoxChk";
 
-
-
-
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root/>,
+    element: <Root />,
     children: [
-      {index: true, element: <MainLayout/>},
-      {path: "/guide", element: <Guide/>},
+      { index: true, element: <MainLayout /> },
+      { path: "/guide", element: <Guide /> },
       // {path: "/latest-list", element: <LatestList/>},
       // {path: "/button", element: <Button/>},
       // {path: "/avail_course", element: <AvailCoursrs/>},
-      {path: "/SelectBoxBasic", element: <SelectBoxBasic/>},
-      {path: "/SelectBoxChk", element: <SelectBoxChk/>},
+      { path: "/SelectBoxBasic", element: <SelectBoxBasic /> },
+      { path: "/SelectBoxChk", element: <SelectBoxChk /> },
     ],
   },
 ]);
 
 const App: React.FC = () => {
-  return <RouterProvider router={router}/>;
+  return <RouterProvider router={router} />;
 };
 
 export default App;

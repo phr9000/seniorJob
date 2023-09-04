@@ -7,9 +7,7 @@ import AvailCourses from "src/components/AvailCourses";
 import NeedHelp from "src/pages/Main/needhelp/NeedHelp";
 import SubBanner from "src/components/banner/SubBanner";
 import SponsorBanner from "src/components/banner/SponsorBanner";
-
-
-
+import SearchBox from "./searchbox/SearchBox";
 
 const MainLayout: React.FC = () => {
   return (
@@ -20,12 +18,11 @@ const MainLayout: React.FC = () => {
           <p>
             Founded in 2006, the Centre For Seniors (CFS) is a non-profit,
             Social Service Agency (SSA) that is committed to promoting the total
-            well-being of
-            older persons in Singapore, specifically their vocational,
-            financial and psycho-social health. Silver Job portal is created
-            with seniors in mind to help
-            them to explore work in the various sectors for meaningful
-            retirement. For more info, please go to{" "}
+            well-being of older persons in Singapore, specifically their
+            vocational, financial and psycho-social health. Silver Job portal is
+            created with seniors in mind to help them to explore work in the
+            various sectors for meaningful retirement. For more info, please go
+            to{" "}
             <a className="go-link" href="https://cfs.org.sg">
               https://cfs.org.sg
             </a>
@@ -38,36 +35,23 @@ const MainLayout: React.FC = () => {
         </div>
       </section>
       <section className="search-box-container">
-        <div className="top">
-          <div className="col-xs-12 col-sm-6 col-md-6">
-            <input type="text"/>
-          </div>
-          <div className="col-xs-12 col-sm-6 col-md-2">
-            <input type="text"/>
-          </div>
-          <div className="col-xs-12 col-sm-6 col-md-2">
-            <input type="text"/>
-          </div>
-          <div className="col-xs-12 col-sm-6 col-md-2">
-            <input type="text"/>
-          </div>
-        </div>
+        <SearchBox />
       </section>
-      
+
       <section className="latestListComp">
-        <LatestList/>
+        <LatestList />
       </section>
-      
-      <NeedHelp/>
-      
+
+      <NeedHelp />
+
       <section className="AvailCoursesComp">
-        <AvailCourses/>
+        <AvailCourses />
       </section>
       <section className="SubBannerComp">
-        <SubBanner/>
+        <SubBanner />
       </section>
       <section className="SponsorBannerComp">
-        <SponsorBanner/>
+        <SponsorBanner />
       </section>
     </main>
   );

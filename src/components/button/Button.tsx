@@ -1,52 +1,64 @@
-import React from 'react';
+import React from "react";
 
 interface ButtonProps {
   label?: string;
-  color?: 'basic' | 'red' | 'primary';
-  size?: 'sm' | 'md' | 'lg';
+  color?: "basic" | "red" | "primary";
+  size?: "sm" | "md" | "lg" | "full";
   icon?: string;
   disable?: boolean;
   additionalClass?: string;
   children?: React.ReactNode;
 }
 
-const Button: React.FC<ButtonProps> = ({ label = '버튼 라벨명', color = 'basic', size = 'md', icon, additionalClass }) => {
+const Button: React.FC<ButtonProps> = ({
+  label = "버튼 라벨명",
+  color = "basic",
+  size = "md",
+  icon,
+  additionalClass,
+}) => {
   let colorClass: string;
   let sizeClass: string;
 
   switch (color) {
-    case 'red':
-      colorClass = 'btn-red';
+    case "red":
+      colorClass = "btn-red";
       break;
 
-    case 'primary':
-      colorClass = 'btn-blue';
+    case "primary":
+      colorClass = "btn-blue";
       break;
 
     default:
-      colorClass = 'btn-basic';
+      colorClass = "btn-basic";
       break;
   }
 
   switch (size) {
-    case 'sm':
-      sizeClass = 'btn-size-s';
+    case "sm":
+      sizeClass = "btn-size-s";
       break;
 
-    case 'md':
-      sizeClass = 'btn-size-m';
+    case "md":
+      sizeClass = "btn-size-m";
       break;
 
-    case 'lg':
-      sizeClass = 'btn-size-l';
+    case "lg":
+      sizeClass = "btn-size-l";
+      break;
+
+    case "full":
+      sizeClass = "btn-full";
       break;
 
     default:
-      sizeClass = 'btn-size-m';
+      sizeClass = "btn-size-m";
       break;
   }
 
-  const classList = ['btn', colorClass, sizeClass, additionalClass].filter(Boolean).join(' ');
+  const classList = ["btn", colorClass, sizeClass, additionalClass]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <button className={classList}>
