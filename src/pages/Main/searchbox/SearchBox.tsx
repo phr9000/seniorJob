@@ -7,11 +7,11 @@ import Button from "src/components/button/Button";
 const SearchBox: React.FC = () => {
   // 첫 번째 SelectBoxChk 컴포넌트에 대한 상태와 콜백 함수
   const [isDropdownOpen1, setIsDropdownOpen1] = useState(false);
-  const [selectedItems1, setSelectedItems1] = useState<string[]>([]);
+  const [selectedItems1, _setSelectedItems1] = useState<string[]>([]);
 
   // 두 번째 SelectBoxChk 컴포넌트에 대한 상태와 콜백 함수
   const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
-  const [selectedItems2, setSelectedItems2] = useState<string[]>([]);
+  const [selectedItems2, _setSelectedItems2] = useState<string[]>([]);
 
   return (
     <>
