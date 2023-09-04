@@ -22,8 +22,6 @@ const router = createBrowserRouter([
       // {path: "/latest-list", element: <LatestList/>},
       // {path: "/button", element: <Button/>},
       // {path: "/avail_course", element: <AvailCoursrs/>},
-      { path: "/SelectBoxBasic", element: <SelectBoxBasic /> },
-      { path: "/SelectBoxChk", element: <SelectBoxChk /> },
     ],
   },
 ]);

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { Link } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 
 /* Import imgs */
 import imgs from "src/common/ImgDef";
@@ -53,6 +53,10 @@ export function BigBtn({ title = "View All Jobs" }: BigBtnTitleProps) {
 }
 
 const Guide: React.FC = () => {
+  // 첫 번째 SelectBoxChk 컴포넌트에 대한 상태와 콜백 함수
+  const [isDropdownOpen1, setIsDropdownOpen1] = useState(false);
+  const [selectedItems1, setSelectedItems1] = useState<string[]>([]);
+
   // 가이드 모듈타이틀에 대한 스타일
   const commonStyle: React.CSSProperties = {
     fontWeight: "700",
@@ -158,7 +162,13 @@ const Guide: React.FC = () => {
 
       {/* 08.Select Box Check Style */}
       <div style={{ ...commonStyle, ...fontSize20 }}>[ 08.SelectBoxChk ]</div>
-      <SelectBoxChk />
+      <SelectBoxChk
+        isOpen={isDropdownOpen1}
+        toggleDropdown={() => setIsDropdownOpen1(!isDropdownOpen1)}
+        selectedItems={selectedItems1}
+        items={["All", "Option1", "Option2"]} // 적절한 아이템 배열 전달
+        defaultLabel="Select Label"
+      />
 
       {/* 08.Select Box Basic Style */}
       <div style={{ ...commonStyle, ...fontSize20 }}>[ 09.SelectBoxBasic ]</div>

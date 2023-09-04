@@ -28,7 +28,7 @@ main {
         width: 90%;
       }
       @media (#{$tablet}) {
-        top: 2rem;
+        top: 1.5rem;
         padding: 0 1.5rem;
         width: 100%;
       }
@@ -106,6 +106,9 @@ main {
     }
     .btn {
       margin-top: 2.4rem;
+      @media (#{$mobile}) {
+        margin-top: 1rem;
+      }
     }
   }
 }
@@ -204,6 +207,10 @@ main {
         color: $primary;
         font-size: 1.8rem;
         font-weight: 600;
+        line-height: 1.9rem;
+      }
+      span {
+        font-size: 1.6rem;
       }
     }
   }

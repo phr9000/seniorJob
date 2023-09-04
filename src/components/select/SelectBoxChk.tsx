@@ -4,10 +4,21 @@ import React, { useState } from "react";
 /* Import SCSS */
 import "src/assets/styles/layout/selectBoxChk.scss";
 
-// Dropdown에 표시될 아이템 배열
-const ITEMS = ["All", "Part Time", "Full Time", "Contract"];
+// SelectBoxChkProps 인터페이스 정의
+interface SelectBoxChkProps {
+  isOpen: boolean;
+  toggleDropdown: () => void;
+  selectedItems: string[];
+  items: string[];
+  defaultLabel: string;
+}
 
-const SelectBoxChk: React.FC = () => {
+// SelectBoxChk 컴포넌트 정의
+const SelectBoxChk: React.FC<SelectBoxChkProps> = ({
+  toggleDropdown,
+  items,
+  defaultLabel,
+}) => {
   // Dropdown이 열려있는지 여부를 저장하는 상태
   const [isOpen, setIsOpen] = useState(false);
   // 선택된 아이템들을 저장하는 상태
@@ -21,8 +32,11 @@ const SelectBoxChk: React.FC = () => {
   >({});
 
   // Dropdown을 열고 닫는 엑션 함수
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+  const toggleDropdownHandler = () => {
+    setIsOpen(!isOpen); // Dropdown 열림/닫힘 상태를 토글
+    if (toggleDropdown) {
+      toggleDropdown(); // 외부에서 제공된 toggleDropdown 콜백 함수 호출 (선택 사항)
+    }
   };
 
   // 체크박스 항목을 클릭할 때의 처리 함수
@@ -32,16 +46,16 @@ const SelectBoxChk: React.FC = () => {
 
       if (item === "All") {
         if (e.target.checked) {
-          newSelectedItems = ["All"];
+          newSelectedItems = ["All"]; // 'All'을 선택하면 모든 항목 선택
         } else {
-          newSelectedItems = newSelectedItems.filter((i) => i !== "All");
+          newSelectedItems = newSelectedItems.filter((i) => i !== "All"); // 'All' 선택 해제
         }
       } else {
         const isAlreadySelected = newSelectedItems.includes(item);
         if (isAlreadySelected) {
-          newSelectedItems = newSelectedItems.filter((i) => i !== item);
+          newSelectedItems = newSelectedItems.filter((i) => i !== item); // 이미 선택된 항목 선택 해제
         } else {
-          newSelectedItems.push(item);
+          newSelectedItems.push(item); // 새로운 항목 선택
         }
         // 'All'과 다른 항목을 동시에 선택할 수 없으므로, 다른 항목을 선택했을 때 'All'을 선택 항목에서 제거
         newSelectedItems = newSelectedItems.filter((i) => i !== "All");
@@ -66,22 +80,27 @@ const SelectBoxChk: React.FC = () => {
     });
   };
 
+  // 컴포넌트 렌더링
   return (
     <div className="dropdown_area select_chk">
-      <button type="button" className="dropdown_label" onClick={toggleDropdown}>
+      <button
+        type="button"
+        className="dropdown_label"
+        onClick={toggleDropdownHandler}
+      >
         <span className="_label" style={labelStyle}>
           {selectedItems.includes("All")
             ? "All"
             : selectedItems.length
             ? selectedItems.join(", ")
-            : "Category"}
+            : defaultLabel}
         </span>
         <span className="_arrow_icon"></span>
       </button>
       {isOpen && (
         <div className="dropdown_menu">
           <ul>
-            {ITEMS.map((item, index) => (
+            {items.map((item, index) => (
               <li className="_item" key={index}>
                 <label onClick={handleLabelColorChange}>
                   <input
@@ -103,4 +122,5 @@ const SelectBoxChk: React.FC = () => {
     </div>
   );
 };
+
 export default SelectBoxChk;
