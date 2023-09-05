@@ -8,6 +8,14 @@
 import thumb_01 from "src/assets/imgs/thumb_01.png";
 import needHelp_01 from "src/assets/imgs/need_help01.jpg";
 import logo_fastjobs from "src/assets/imgs/logo_fastjobs.png";
+import need_help01 from "src/assets/imgs/need_help01.jpg"; // need help
+import need_help02 from "src/assets/imgs/need_help02.jpg"; // need help
+import need_help03 from "src/assets/imgs/need_help03.jpg"; // need help
+import need_help04 from "src/assets/imgs/need_help04.jpg"; // need help
+import need_help05 from "src/assets/imgs/need_help05.jpg"; // need help
+import need_help06 from "src/assets/imgs/need_help06.jpg"; // need help
+import need_help07 from "src/assets/imgs/need_help07.jpg"; // need help
+import need_help08 from "src/assets/imgs/need_help08.jpg"; // need help
 // ..추가가능
 
 
@@ -16,6 +24,14 @@ const imgs = {
   thumb_01: thumb_01,
   needHelp_01: needHelp_01,
   logo_fastjobs: logo_fastjobs,
+  need_help01: need_help01,
+  need_help02: need_help02,
+  need_help03: need_help03,
+  need_help04: need_help04,
+  need_help05: need_help05,
+  need_help06: need_help06,
+  need_help07: need_help07,
+  need_help08: need_help08
   // ..추가 가능
   
   

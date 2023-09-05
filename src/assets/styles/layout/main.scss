@@ -178,6 +178,7 @@ main {
 
   .grid {
     max-width: 1170px;
+    padding: 0 1.5rem;
     margin: 0 auto;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 3rem;
@@ -190,34 +191,53 @@ main {
     }
 
     .img-area {
-      &.img-01 {
-        width: 100%;
-        height: 9rem;
-        background-repeat: no-repeat;
-        background-position: center left;
-        background-size: cover;
-        background-image: url("../../imgs/need_help01.jpg");
-      }
+      width: 100%;
+      height: 9rem;
+      background-repeat: no-repeat;
+      background-position: center left;
+      background-size: cover;
     }
 
     .txt-area {
+      position: relative;
       padding: 10px;
 
       h3 {
+        width: 64%;
         color: $primary;
         font-size: 1.8rem;
         font-weight: 600;
         line-height: 1.9rem;
+        word-break: keep-all;
       }
       span {
         font-size: 1.6rem;
+      }
+    }
+    .arrow-area {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3.6rem;
+      min-height: 3.6rem;
+      height: 3.6rem;
+      min-height: 3.6rem;
+      background-color: #b40000;
+      border-radius: 50%;
+      cursor: pointer;
+      i {
+        font-size: 1.6rem;
+        color: $white;
       }
     }
   }
 
   @media (#{$tablet}) {
     .grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1.5rem;
     }
   }
@@ -225,11 +245,14 @@ main {
     .grid {
       grid-template-columns: repeat(1, minmax(0, 1fr));
       gap: 0rem;
-
-      .img-area {
-        &.img-01 {
-          height: 200px;
+      li {
+        margin-bottom: 1rem;
+        &:last-child {
+          margin-bottom: 0rem; 
         }
+      }
+      .img-area {
+          height: 200px;
       }
     }
   }
