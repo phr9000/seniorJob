@@ -1,9 +1,10 @@
 /* eslint-disable */
-import { Link } from "react-router-dom";
+import {NavLink} from 'react-router-dom'
 import React, { useState } from "react";
 import Button from "src/components/button/Button";
 
 const Header: React.FC = () => {
+  
   // dropdown
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleClick = () => {
@@ -13,15 +14,29 @@ const Header: React.FC = () => {
     <header>
       <div className="header-inner">
         <h1 className="logo">
-          <Link to="/">SILVERJOBS</Link>
+          <NavLink to='/' >SILVERJOBS</NavLink>
         </h1>
         <div className={`dropdown-area ${isMenuOpen ? "active" : ""}`}>
           <ul className="flex items-center h-100">
             <li className="active h-100">
-              <Link to="/">Home</Link>
+            <NavLink
+              to="/"
+              className={({ isActive}) =>
+                isActive ? "active" : ""
+              }
+            >
+              Home
+            </NavLink>
             </li>
             <li>
-              <a href="#none">Jobs</a>
+            <NavLink
+              to="/jobs"
+              className={({ isActive}) =>
+                isActive ? "active" : ""
+              }
+            >
+              Jobs
+            </NavLink>
             </li>
             <li>
               <a href="#none">Courses</a>

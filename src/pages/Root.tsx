@@ -9,7 +9,7 @@ import "src/assets/fontawesome/css/solid.css";
 
 import Header from "src/components/Header";
 import Footer from "src/components/Footer";
-
+import SponsorBanner from "src/components/banner/SponsorBanner";
 
 
 
@@ -20,6 +20,9 @@ const Root: React.FC = () => {
       <div>
         <Outlet/>
       </div>
+      <section className="SponsorBannerComp">
+        <SponsorBanner />
+      </section>
       <Footer/>
     </div>
   );
