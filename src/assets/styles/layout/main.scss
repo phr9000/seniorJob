@@ -84,9 +84,6 @@ main {
     border: 1px solid #ccc;
     background-color: $white;
     @media (#{$pc-small}) {
-      width: 72rem;
-    }
-    @media (#{$mobile}) {
       width: 95%;
     }
     .top {
