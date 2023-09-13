@@ -181,6 +181,9 @@ main {
         }
       }
     }
+    &.sub-page {
+      padding-bottom: 20px;
+    }
   }
 }
 
@@ -238,6 +241,9 @@ main {
   .container {
     width: 117rem;
     margin: 0 auto; 
+    &.sub-page {
+      padding-top: 12rem;
+    }
   }
 }
 
