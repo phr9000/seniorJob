@@ -6,7 +6,6 @@ import LatestList from "src/components/LatestList";
 import AvailCourses from "src/components/AvailCourses";
 import NeedHelp from "src/pages/Main/needhelp/NeedHelp";
 import SubBanner from "src/components/banner/SubBanner";
-import SponsorBanner from "src/components/banner/SponsorBanner";
 import SearchBox from "./searchbox/SearchBox";
 
 const MainLayout: React.FC = () => {
@@ -124,9 +123,6 @@ const MainLayout: React.FC = () => {
       </section>
       <section className="SubBannerComp">
         <SubBanner />
-      </section>
-      <section className="SponsorBannerComp">
-        <SponsorBanner />
       </section>
     </main>
   );
