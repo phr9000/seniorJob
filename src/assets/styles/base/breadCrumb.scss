@@ -1,0 +1,45 @@
+@import "src/assets/styles/abstracts/mixin.scss";
+
+.breadcrumb-container {
+    width: 100%;
+    background-color: #f0f0f0;
+    .breadcrumb-inner {
+        display: flex;
+        align-items: center;
+        padding: 0.8rem 1.5rem;
+        width: 117rem;
+        margin: 0 auto; 
+        text-align: left;
+        font-size: 1.6rem; 
+        @media (#{$pc-small}) {
+            width: 97rem; 
+        }
+        @media (max-width: 990px) {
+            width: 100%;
+        }
+    }
+    .current-route
+    {
+        color: #777777; 
+    }
+    .split {
+        display: inline-block;
+        padding: 0 0.5rem;
+        color: #ccc;
+    }
+    span,
+    a {
+        &:not(.current-route),
+        &:not(.split) {
+            color: #3428c9;
+            &:hover {
+                color: #337ab7;
+                text-decoration: underline;
+            }
+            &:active {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+}

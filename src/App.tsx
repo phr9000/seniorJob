@@ -6,6 +6,7 @@ import "src/App.css";
 import Root from "src/pages/Root";
 import MainLayout from "src/pages/Main/MainLayout";
 import JobsLayout from "src/pages/Jobs/JobsLayout";
+import JobsDetail from "src/pages/Jobs/JobsDetail";
 import Guide from "src/components/Guide";
 
 // import LatestList from "src/components/LatestList";
@@ -19,10 +20,13 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <MainLayout /> },
       { path: "/guide", element: <Guide /> },
-      { path: "/jobs", element: < JobsLayout /> },
-      // {path: "/latest-list", element: <LatestList/>},
-      // {path: "/button", element: <Button/>},
-      // {path: "/avail_course", element: <AvailCoursrs/>},
+      { path: "/jobs", element: <JobsLayout /> },
+      {
+        path: "/jobs", // /jobs 아래에 jobsdetail 추가
+        children: [
+          { path: "jobsDetail", element: <JobsDetail /> },
+        ],
+      },
     ],
   },
 ]);
