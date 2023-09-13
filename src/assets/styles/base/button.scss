@@ -16,16 +16,37 @@
   }
 
   // color
-  &-red {
+  &-red-line {
     color: $red1;
     border: 1px solid $red1;
 
     &:hover {
       color: $red1;
     }
+    &:active {
+      box-shadow: inset rgba(0, 0, 0, 0.2) 0px 0px 5px 0px;
+    }
   }
 
-  &-blue {
+  &-primary-line {
+    color: $primary;
+    border: 1px solid $primary;
+
+    &:hover {
+      color: $primary;
+    }
+    &:active {
+      box-shadow: inset rgba(0, 0, 0, 0.2) 0px 0px 5px 0px;
+    }
+  }
+
+  &-red-fill {
+    color: $white;
+    background-color: $red1;
+    border: 1px solid $red1;
+  }
+
+  &-blue-fill {
     color: $white;
     background-color: $primary;
     border: 1px solid $primary;

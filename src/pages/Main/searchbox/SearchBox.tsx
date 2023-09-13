@@ -44,7 +44,7 @@ const SearchBox: React.FC = () => {
           </div>
         </div>
         <Button
-          color="primary"
+          color="primary-fill"
           size="full"
           label="&nbsp;&nbsp;Search Job"
           icon="fa-solid fa-magnifying-glass"

@@ -20,11 +20,11 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <MainLayout /> },
       { path: "/guide", element: <Guide /> },
-      { path: "/jobs", element: <JobsLayout /> },
+      { path: "/Jobs", element: <JobsLayout /> },
       {
-        path: "/jobs", // /jobs 아래에 jobsdetail 추가
+        path: "/Jobs", // /jobs 아래에 jobsdetail 추가
         children: [
-          { path: "jobsDetail", element: <JobsDetail /> },
+          { path: "JobsDetail", element: <JobsDetail /> },
         ],
       },
     ],

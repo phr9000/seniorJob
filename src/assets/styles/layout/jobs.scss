@@ -11,15 +11,24 @@
 .jobs-detail-container {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem; 
+    display: flex;
     .left {
         width: 67%;
-        height: 30px;
-        border: 1px solid red;
         box-sizing: border-box;
+        .post-date {
+            text-transform: uppercase;
+            color: #777;
+            font-size: 1.2rem; 
+        }
     }
     .right {
         width: 33%;
+        padding: 2rem;
         box-sizing: border-box;
+        background-color: #f0f0f0;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
     }
     @media (min-width: 1200px) and (max-width: 1920px) {
         width: 117rem;
