@@ -5,12 +5,15 @@ import React, {useState} from "react"
 /* Import imgs */
 import imgs from 'src/common/ImgDef';
 
-/* Import SCSS */
+interface FooterProps {
+  style?: React.CSSProperties; // style 속성을 받아들일 수 있도록 추가
+}
 
 
-const Footer: React.FC = () => {
+
+const Footer: React.FC<FooterProps> = ({style}) => {
   return (
-    <footer>
+    <footer style={style}>
       <div className="ft_inner">
         <div className="copy_area">
           &copy; 2020, Centre for Seniors. All Rights Reserved.

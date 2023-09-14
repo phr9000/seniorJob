@@ -15,20 +15,22 @@ const MainLayout: React.FC = () => {
                     </h4>
                 </div>
                 <div className="right">
-                <Button
-                    color="red-fill"
-                    size="full"
-                    label="&nbsp;&nbsp;Register Now"
-                    icon="fa-solid fa-user-plus"
-                    additionalClass="mb-5"
-                />
-                <Button
-                    color="primary-line"
-                    size="full"
-                    label="&nbsp;&nbsp;Save Course"
-                    icon="fa-regular fa-bookmark"
-                    additionalClass="pb-5"
-                />
+                    <div className="button-area">
+                        <Button
+                            color="red-fill"
+                            size="full"
+                            label="&nbsp;&nbsp;Apply Now"
+                            icon="fa-solid fa-user-plus"
+                            additionalClass="mb-5"
+                        />
+                        <Button
+                            color="primary-line"
+                            size="full"
+                            label="&nbsp;&nbsp;Save Course"
+                            icon="fa-regular fa-bookmark"
+                            additionalClass="pb-5"
+                        />
+                    </div>
                 </div>
             </div>
         </main>

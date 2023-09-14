@@ -17,6 +17,7 @@
 
   // color
   &-red-line {
+    background-color: $white;
     color: $red1;
     border: 1px solid $red1;
 
@@ -29,9 +30,10 @@
   }
 
   &-primary-line {
+    background-color: $white;
     color: $primary;
     border: 1px solid $primary;
-
+    
     &:hover {
       color: $primary;
     }
