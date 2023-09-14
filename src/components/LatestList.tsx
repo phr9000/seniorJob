@@ -1,61 +1,55 @@
 /* eslint-disable */
-import React from "react";
-import { Link } from "react-router-dom";
-
-/* Import imgs */
-import imgs from 'src/common/ImgDef';
-
-/* Import SCSS */
+import React, {useState} from "react";
+import { NavLink } from "react-router-dom";
+import imgs from "src/common/ImgDef";
 import "src/assets/styles/layout/latestList.scss";
-
-/* Import Component */
-import {SecTitle} from 'src/components/Guide';
-import {BigBtn} from 'src/components/Guide';
-
-
-
+import { SecTitle } from "src/components/Guide";
+import { BigBtn } from "src/components/Guide";
 
 const jobList = [
   {
     thumb: imgs.thumb_01,
     postedOn: "26 Aug 2023",
-    jobTypes: [ "Part Time", "Full Time" ],
+    jobTypes: ["Part Time", "Full Time"],
     title: "Fashion Retail Assistant (Part-Time)",
     company: "CENTRE FOR SENIORS",
     location: "Dakota - CC8",
     calendar: "5 Day Week",
     salary: "$3500",
-    period: "per month"
+    period: "per month",
   },
   {
     thumb: imgs.thumb_01,
     postedOn: "26 Aug 2023",
-    jobTypes: [ "Full Time" ],
+    jobTypes: ["Full Time"],
     title: "Trolley Service Officer (F/T)",
     company: "CENTRE FOR SENIORS",
     location: "Changi Airport - CG2",
     calendar: "4 Day Week",
     salary: "$1600",
-    period: "per month"
+    period: "per month",
   },
   {
     thumb: imgs.thumb_01,
     postedOn: "26 Aug 2023",
-    jobTypes: [ "Full Time" ],
+    jobTypes: ["Full Time"],
     title: "Training For Befrienders (English)",
     company: "CENTRE FOR SENIORS",
     location: "Changi Airport - CG2",
     calendar: "6 Day Week",
     salary: "$1600",
-    period: "per month"
-  }
+    period: "per month",
+  },
 ];
 
-export const JobItem: React.FC<{ job: typeof jobList[0] }> = ({job}) => (
+export const JobItem: React.FC<{
+  job: typeof jobList[0];
+  closeMenu: () => void;
+}> = ({ job, closeMenu }) => (
   <li className="sec_list">
-    <Link to='/Jobs/JobsDetail' className="add_links flex">
+    <NavLink to="/Jobs/JobsDetail" className="add_links flex" onClick={closeMenu}>
       <div className="thumb_area shrink-0">
-        <img src={job.thumb} alt=""/>
+        <img src={job.thumb} alt="" />
       </div>
       <div className="text_area">
         <div className="row flex justify-between">
@@ -64,7 +58,7 @@ export const JobItem: React.FC<{ job: typeof jobList[0] }> = ({job}) => (
             &nbsp;&nbsp;Posted on {job.postedOn}
           </span>
           <div className="time_type row flex items-center">
-            {job.jobTypes.map(type => (
+            {job.jobTypes.map((type) => (
               <p className={`jobtype_${type.toLowerCase().replace(" ", "_")}`} key={type}>
                 <i className="far fa-clock"></i>
                 &nbsp;&nbsp;{type}
@@ -103,19 +97,32 @@ export const JobItem: React.FC<{ job: typeof jobList[0] }> = ({job}) => (
           </div>
         </div>
       </div>
-    </Link>
+    </NavLink>
   </li>
 );
 
 const LatestList: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <div className="section_inner">
-      <SecTitle title="Latest Jobs"/>
+      <SecTitle title="Latest Jobs" />
       <ul className="sec_cont">
-        {jobList.map(job => <JobItem job={job} key={job.title}/>)}
+        {jobList.map((job) => (
+          <JobItem job={job} key={job.title} closeMenu={closeMenu} />
+        ))}
       </ul>
-      <BigBtn title="View All Jobs"/>
+      <BigBtn title="View All Jobs" />
     </div>
   );
 };
+
 export default LatestList;

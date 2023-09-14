@@ -13,6 +13,10 @@ const MainLayout: React.FC = () => {
                         <i className="fas fa-pencil-alt"></i>
                         &nbsp;&nbsp;<span>POSTED ON 27-JUN-2022</span>
                     </h4>
+                    <span className="job-type-bage">
+                        <i className="fa-regular fa-clock"></i>
+                        &nbsp;&nbsp;Full Time
+                    </span>
                 </div>
                 <div className="right">
                     <div className="button-area">

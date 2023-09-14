@@ -134,7 +134,7 @@ const Guide: React.FC = () => {
       <div style={{ ...commonStyle, ...fontSize20 }}>
         [ 03.Latest List Item ]
       </div>
-      <JobItem job={someJobData} />
+      {/* <JobItem job={someJobData} /> */}
 
       {/* 04.Available Courses List Item */}
       <div style={{ ...commonStyle, ...fontSize20 }}>

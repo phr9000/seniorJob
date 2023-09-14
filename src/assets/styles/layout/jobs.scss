@@ -21,9 +21,21 @@
         height: 800px; //임시
         box-sizing: border-box;
         .post-date {
+            margin-bottom: 1rem;
             text-transform: uppercase;
             color: #777;
             font-size: 1.2rem; 
+        }
+        .job-type-bage {
+            display: inline-block;
+            padding: 0.5rem 0.8rem;
+            background-color: $green1;
+            text-align: center;
+            font-weight: 500;
+            color: $green2;
+            border-radius: 2.5rem;
+            border: 1px solid $green1;
+            font-size: 1.6rem;
         }
     }
     .right {

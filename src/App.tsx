@@ -9,10 +9,6 @@ import JobsLayout from "src/pages/Jobs/JobsLayout";
 import JobsDetail from "src/pages/Jobs/JobsDetail";
 import Guide from "src/components/Guide";
 
-// import LatestList from "src/components/LatestList";
-// import Button from "src/components/button/Button";
-// import AvailCoursrs from "src/components/AvailCourses";
-
 const router = createBrowserRouter([
   {
     path: "/",
