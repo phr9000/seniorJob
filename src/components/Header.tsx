@@ -45,11 +45,11 @@ const Header: React.FC = () => {
               <a href="#none">Contact Us</a>
             </li>
           </ul>
-          <Button label="Resume Drop Off" color="red" additionalClass="ml-6" />
+          <Button label="Resume Drop Off" color="red-line" additionalClass="ml-6" />
           <Button label="Search Candidate" additionalClass="ml-8" />
           <Button
             label="Login / Sign Up"
-            color="primary"
+            color="primary-fill"
             additionalClass="ml-8"
           />
         </div>

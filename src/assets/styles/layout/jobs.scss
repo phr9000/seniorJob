@@ -11,15 +11,28 @@
 .jobs-detail-container {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem; 
+    display: flex;
     .left {
         width: 67%;
-        height: 30px;
-        border: 1px solid red;
+        height: 800px; //임시
         box-sizing: border-box;
+        .post-date {
+            text-transform: uppercase;
+            color: #777;
+            font-size: 1.2rem; 
+        }
     }
     .right {
         width: 33%;
+        padding: 2rem;
         box-sizing: border-box;
+        background-color: #f0f0f0;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
+        .btn-secret-container {
+            padding: 50px; 
+        }
     }
     @media (min-width: 1200px) and (max-width: 1920px) {
         width: 117rem;
@@ -28,5 +41,28 @@
     @media (min-width: 990px) and (max-width: 1200px) {
         width: 97rem;
         margin: 0 auto; 
+    }
+    // mobile
+    @media (#{$mobile}) {
+        .jobs-detail-container {
+            &:before {
+                display: block;
+                content: '';
+                padding-bottom: 4.2rem; 
+            }
+        }
+        .right {
+            .button-area {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                .btn {
+                    width: 50%;
+                    margin: 0;
+                    border-radius: 0;
+                }
+            }
+        }
     }
 }

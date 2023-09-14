@@ -53,7 +53,7 @@ const jobList = [
 
 export const JobItem: React.FC<{ job: typeof jobList[0] }> = ({job}) => (
   <li className="sec_list">
-    <Link to='/jobs/jobsDetail' className="add_links flex">
+    <Link to='/Jobs/JobsDetail' className="add_links flex">
       <div className="thumb_area shrink-0">
         <img src={job.thumb} alt=""/>
       </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 interface ButtonProps {
   label?: string;
-  color?: "basic" | "red" | "primary";
+  color?: "basic" | "red-line" |  "primary-line" | "red-fill" |"primary-fill";
   size?: "sm" | "md" | "lg" | "full";
   icon?: string;
   disable?: boolean;
@@ -21,12 +21,20 @@ const Button: React.FC<ButtonProps> = ({
   let sizeClass: string;
 
   switch (color) {
-    case "red":
-      colorClass = "btn-red";
+    case "red-line":
+      colorClass = "btn-red-line";
       break;
 
-    case "primary":
-      colorClass = "btn-blue";
+    case "primary-line":
+      colorClass = "btn-primary-line";
+      break;  
+
+    case "red-fill":
+      colorClass = "btn-red-fill";
+      break;  
+
+    case "primary-fill":
+      colorClass = "btn-blue-fill";
       break;
 
     default:

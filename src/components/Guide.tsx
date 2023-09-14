@@ -146,7 +146,7 @@ const Guide: React.FC = () => {
       <div style={{ ...commonStyle, ...fontSize20 }}>
         [ 05.button component ]
       </div>
-      <Button label="라벨ㄹㄹㄹ" color="red" />
+      <Button label="라벨ㄹㄹㄹ" color="red-line" />
 
       {/* 06.Sub Banner */}
       <div style={{ ...commonStyle, ...fontSize20 }}>[ 06.Sub Banner ]</div>
