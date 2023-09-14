@@ -17,6 +17,9 @@ const MainLayout: React.FC = () => {
                         <i className="fa-regular fa-clock"></i>
                         &nbsp;&nbsp;Full Time
                     </span>
+                    <h2>
+                        Administrative Assistant (1-year contract)
+                    </h2>
                 </div>
                 <div className="right">
                     <div className="button-area">
