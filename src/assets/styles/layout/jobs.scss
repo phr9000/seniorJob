@@ -9,10 +9,12 @@
 
 // jobs detail
 .jobs-detail-container {
+    //시작 mobile 
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     padding-top: 3rem;
     padding-bottom: 3rem; 
+    //끝 mobile 
     display: flex;
     .left {
         width: 67%;
@@ -34,10 +36,12 @@
             padding: 50px; 
         }
     }
+    // pc 
     @media (min-width: 1200px) and (max-width: 1920px) {
         width: 117rem;
         margin: 0 auto; 
     }
+    // table
     @media (min-width: 990px) and (max-width: 1200px) {
         width: 97rem;
         margin: 0 auto; 

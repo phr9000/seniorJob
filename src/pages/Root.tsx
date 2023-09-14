@@ -26,13 +26,16 @@ const Root: React.FC = () => {
   };
 
   useEffect(() => {
-    checkIsMobileWidth();
-    window.addEventListener("resize", checkIsMobileWidth);
+    if (location.pathname === "/Jobs/JobsDetail") {
+      checkIsMobileWidth();
+      window.addEventListener("resize", checkIsMobileWidth);
 
-    return () => {
-      window.removeEventListener("resize", checkIsMobileWidth);
-    };
-  }, []);
+      return () => {
+        window.removeEventListener("resize", checkIsMobileWidth);
+      };
+    }
+  }, [location.pathname]); // location.pathname만을 의존성으로 설정
+    
   // 특정 route에서만 footer에 padding-bottom을 추가하도록 설정
   const isMobileRoute = location.pathname === "/Jobs/JobsDetail"; // 특정 route를 지정
   const footerStyle = {
