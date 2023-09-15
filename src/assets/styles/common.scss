@@ -174,12 +174,22 @@ em {
   width: 100%;
 }
 
+.hr {
+  border-top: 1px solid #eeeeee;
+  &.gray {
+    border-color: #ccc;
+  }
+}
+
 @media (min-width: 992px) {
   .col-md-6 {
     width: 50%;
   }
   .col-md-2 {
     width: 16.66666667%;
+  }
+  .col-md-12 {
+    width: 100%;
   }
 }
 

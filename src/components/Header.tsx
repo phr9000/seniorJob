@@ -1,42 +1,45 @@
 /* eslint-disable */
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 import React, { useState } from "react";
 import Button from "src/components/button/Button";
 
 const Header: React.FC = () => {
-  
   // dropdown
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  // NavLink 클릭 시 메뉴 닫기 이벤트
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header>
       <div className="header-inner">
         <h1 className="logo">
-          <NavLink to='/' >SILVERJOBS</NavLink>
+          <NavLink to='/' onClick={closeMenu}>SILVERJOBS</NavLink>
         </h1>
         <div className={`dropdown-area ${isMenuOpen ? "active" : ""}`}>
           <ul className="flex items-center h-100">
             <li className="active h-100">
-            <NavLink
-              to="/"
-              className={({ isActive}) =>
-                isActive ? "active" : ""
-              }
-            >
-              Home
-            </NavLink>
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? "active" : "")}
+                onClick={closeMenu}
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-            <NavLink
-              to="/jobs"
-              className={({ isActive}) =>
-                isActive ? "active" : ""
-              }
-            >
-              Jobs
-            </NavLink>
+              <NavLink
+                to="/jobs"
+                className={({ isActive }) => (isActive ? "active" : "")}
+                onClick={closeMenu}
+              >
+                Jobs
+              </NavLink>
             </li>
             <li>
               <a href="#none">Courses</a>
@@ -52,6 +55,7 @@ const Header: React.FC = () => {
             color="primary-fill"
             additionalClass="ml-8"
           />
+          <Button label="KO/EN" color="red-fill" additionalClass="ml-8" />
         </div>
         <div className="menubar-icon" onClick={handleClick}>
           <i
@@ -62,4 +66,5 @@ const Header: React.FC = () => {
     </header>
   );
 };
+
 export default Header;

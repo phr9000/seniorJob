@@ -1,68 +1,203 @@
 .jobs-layout-container {
-    .sec_title {
-        display: none; 
-    }
-    .big_btn {
-        display: none; 
-    }
+  .sec_title {
+    display: none;
+  }
+  .big_btn {
+    display: none;
+  }
 }
 
 // jobs detail
 .jobs-detail-container {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem; 
-    display: flex;
-    .left {
-        width: 67%;
-        height: 800px; //임시
-        box-sizing: border-box;
-        .post-date {
-            text-transform: uppercase;
-            color: #777;
-            font-size: 1.2rem; 
+  //시작 mobile
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  //끝 mobile
+  display: flex;
+  .left {
+    width: 67%;
+    margin: 0 1.5rem;
+    box-sizing: border-box;
+    .post-date {
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      color: #777;
+      font-size: 1.2rem;
+    }
+    .job-type-bage {
+      display: inline-block;
+      padding: 0.5rem 0.8rem;
+      background-color: $green1;
+      text-align: center;
+      font-weight: 500;
+      color: $green2;
+      border-radius: 2.5rem;
+      border: 1px solid $green1;
+      font-size: 1.6rem;
+    }
+    h2 {
+      margin: 5px 0;
+      font-size: 2.6rem;
+      color: #333;
+      font-weight: 600;
+      line-height: 2.8rem;
+      text-align: left;
+    }
+    .sal-tt {
+      color: $primary;
+      font-weight: 900;
+      font-size: 2.6rem;
+      p {
+        margin-left: 0.5rem;
+        margin-bottom: 0.5rem;
+        color: #777;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+    }
+    .hr {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    .cate-area {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        padding-bottom: 2rem;
+        &:last-child {
+          padding-bottom: 0;
         }
+      }
+      dt {
+        text-transform: uppercase;
+        color: #777;
+        font-size: 1.2rem;
+      }
+      dd {
+        font-size: 1.4rem;
+        font-weight: 600;
+        i {
+          display: inline-block;
+          margin-right: 0.5rem;
+          font-weight: 900;
+        }
+      }
+    }
+    .description-area {
+      h4 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        padding-bottom: 1rem;
+      }
+      p {
+        font-size: 1.6rem;
+        color: #333;
+      }
+    }
+  }
+  .right {
+    width: 33%;
+    .top {
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-sizing: border-box;
+      background-color: #f0f0f0;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
+    }
+    .btn-secret-container {
+      padding: 50px;
+    }
+    .hr {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+    .company-info {
+      .img {
+        margin-bottom: 2rem;
+        img {
+          width: 14.5rem;
+          height: 14.5rem;
+        }
+      }
+      .detail {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          width: 100%;
+        }
+        dt {
+          text-transform: uppercase;
+          color: #777;
+          font-size: 1.2rem;
+        }
+        dd {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          font-size: 1.4rem;
+          word-break: break-all;
+          font-weight: 600;
+        }
+      }
+    }
+    .bottom {
+      padding: 2rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      background-color: $white;
+      h2 {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+      p {
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+      }
+    }
+  }
+  // pc
+  @media (min-width: 1200px) and (max-width: 1920px) {
+    width: 117rem;
+    margin: 0 auto;
+  }
+  // table
+  @media (min-width: 990px) and (max-width: 1200px) {
+    width: 97rem;
+    margin: 0 auto;
+  }
+  // mobile
+  @media (max-width: 989px) {
+    display: block;
+    .left {
+      width: 100%;
+      margin-bottom: 1.5rem;
+      margin-left: 0;
+      margin-right: 0;
     }
     .right {
-        width: 33%;
-        padding: 2rem;
-        box-sizing: border-box;
-        background-color: #f0f0f0;
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
-        .btn-secret-container {
-            padding: 50px; 
+      width: 100%;
+      .button-area {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        .btn {
+          width: 50%;
+          margin: 0;
+          border-radius: 0;
         }
-    }
-    @media (min-width: 1200px) and (max-width: 1920px) {
-        width: 117rem;
-        margin: 0 auto; 
-    }
-    @media (min-width: 990px) and (max-width: 1200px) {
-        width: 97rem;
-        margin: 0 auto; 
-    }
-    // mobile
-    @media (#{$mobile}) {
-        .jobs-detail-container {
-            &:before {
-                display: block;
-                content: '';
-                padding-bottom: 4.2rem; 
-            }
+      }
+      .hr {
+        display: none;
+      }
+      .detail {
+        li {
+          width: 50% !important;
         }
-        .right {
-            .button-area {
-                position: fixed;
-                left: 0;
-                bottom: 0;
-                width: 100%;
-                .btn {
-                    width: 50%;
-                    margin: 0;
-                    border-radius: 0;
-                }
-            }
-        }
+      }
     }
+  }
 }
