@@ -132,6 +132,7 @@
           text-transform: uppercase;
           color: #777;
           font-size: 1.2rem;
+          word-break: break-all;
         }
         dd {
           margin-top: 1rem;
@@ -195,7 +196,9 @@
       }
       .detail {
         li {
-          width: 50% !important;
+          width: calc(50% - 1rem) !important;
+          margin-left: 1rem;
+          // border:1px solid red;
         }
       }
     }
