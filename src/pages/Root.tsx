@@ -33,6 +33,7 @@ const Root: React.FC = () => {
       return () => {
         window.removeEventListener("resize", checkIsTabletWidth);
       };
+      // test
     }
   }, [location.pathname]); // location.pathname만을 의존성으로 설정
 
