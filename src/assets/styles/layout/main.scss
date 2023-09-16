@@ -15,7 +15,7 @@ main {
     @media (#{$mobile}) {
       height: 26rem;
     }
-
+    
     &-txt-area {
       position: absolute;
       transform: translate(-50%, 0%);
@@ -32,7 +32,7 @@ main {
         padding: 0 1.5rem;
         width: 100%;
       }
-
+      
       h3 {
         margin-bottom: 2rem;
         font-size: 3.5rem;
@@ -48,7 +48,7 @@ main {
           font-size: 1.8rem;
         }
       }
-
+      
       p {
         margin-bottom: 1rem;
         font-size: 1.8rem;
@@ -63,13 +63,13 @@ main {
           font-weight: 400;
         }
       }
-
+      
       .go-link {
         color: $blue1;
       }
     }
   }
-
+  
   // search
   .search-box-container {
     position: relative;
@@ -86,6 +86,7 @@ main {
     @media (#{$pc-small}) {
       width: 95%;
     }
+    
     .top {
       display: flex;
       @media (#{$tablet}) {
@@ -106,11 +107,14 @@ main {
           width: 100%;
         }
       }
+      
       div {
         margin-right: 1.6rem;
+        
         &:last-child {
           margin-right: 0;
         }
+        
         @media (#{$pc-small}) {
           margin-bottom: 1rem;
           &:last-child {
@@ -119,6 +123,7 @@ main {
         }
       }
     }
+    
     .btn {
       margin-top: 2.4rem;
       @media (#{$tablet}) {
@@ -128,6 +133,7 @@ main {
         margin-top: 1rem;
       }
     }
+    
     &.active {
       position: fixed;
       top: 6rem;
@@ -136,21 +142,25 @@ main {
       align-items: center;
       width: 100%;
       background-color: #f0f0f0;
+      
       .search-box-inner {
         display: flex;
         align-items: center;
         margin: 0 auto;
         width: 117rem;
+        
         .top {
           width: calc(100% - 16.6666667%); // 83.333333%
           > div {
             margin-bottom: 0;
+            
             &:last-child {
               margin-right: 1.6rem;
             }
           }
         }
       }
+      
       // ~pc
       @media (min-width: 992px) {
         .col-md-6 {
@@ -174,6 +184,7 @@ main {
           // }
           .top {
             width: 100%;
+            
             & > div {
               margin-bottom: 1rem;
             }
@@ -181,6 +192,7 @@ main {
         }
       }
     }
+    
     &.sub-page {
       padding-bottom: 20px;
     }
@@ -206,7 +218,7 @@ main {
 // big btn
 .big_btn {
   padding-top: 2rem;
-
+  
   a {
     height: 4.6rem;
     display: block;
@@ -238,9 +250,11 @@ main {
       font-size: 2rem;
     }
   }
+  
   .container {
     width: 117rem;
-    margin: 0 auto; 
+    margin: 0 auto;
+    
     &.sub-page {
       padding-top: 12rem;
     }
@@ -256,25 +270,26 @@ main {
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: #f0f0f0;
+  
   .need-help-inner {
     max-width: 117rem;
     margin: 0 auto;
   }
-
+  
   .grid {
     width: 100%;
     padding: 0 1.5rem;
     margin: 0 auto;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 3rem;
-
+    
     li {
       border-radius: 0.5rem;
       border: 1px solid #ccc;
       background-color: $white;
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     }
-
+    
     .img-area {
       width: 100%;
       height: 9rem;
@@ -282,11 +297,11 @@ main {
       background-position: center left;
       background-size: cover;
     }
-
+    
     .txt-area {
       position: relative;
       padding: 10px;
-
+      
       h3 {
         width: 64%;
         color: $primary;
@@ -295,10 +310,12 @@ main {
         line-height: 1.9rem;
         word-break: keep-all;
       }
+      
       span {
         font-size: 1.6rem;
       }
     }
+    
     .arrow-area {
       position: absolute;
       top: 1.2rem;
@@ -313,11 +330,13 @@ main {
       background-color: #b40000;
       border-radius: 50%;
       cursor: pointer;
+      
       i {
         font-size: 1.6rem;
         color: $white;
       }
     }
+    
     &.type {
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1.5rem;
@@ -327,7 +346,7 @@ main {
       }
     }
   }
-
+  
   @media (#{$tablet}) {
     .grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -338,12 +357,15 @@ main {
     .grid {
       grid-template-columns: repeat(1, minmax(0, 1fr));
       gap: 0rem;
+      
       li {
         margin-bottom: 1rem;
+        
         &:last-child {
           margin-bottom: 0rem;
         }
       }
+      
       .img-area {
         height: 200px;
       }
@@ -351,35 +373,35 @@ main {
   }
 }
 
-// SubBanner == In progress by Hong
+// SubBanner
 .SubBannerComp {
   background-image: linear-gradient(82deg, #3428c9, #b40000 100%);
   min-height: 160px;
   margin-top: 3rem;
-
+  
   .section_inner {
     &.sub_banner {
       padding: 2rem 0 4rem;
-
+      
       h2 {
         @include font(2.6rem, 600, #fff, 1.1);
         margin: 2rem 0 1rem;
         font-family: "Poppins", sans-serif;
         text-align: center;
       }
-
+      
       p {
         @include font(1.6rem, 600, #fff, 1.4);
         text-align: center;
         margin-bottom: 1rem;
       }
-
+      
       .big_btn {
         padding-top: 0;
         @include mobile {
           padding: 0 1.5rem;
         }
-
+        
         a {
           width: 36rem;
           height: 4.4rem;
@@ -387,7 +409,7 @@ main {
           background-color: #fff;
           color: #3428c9;
           font-weight: 600;
-
+          
           @include mobile {
             width: 100%;
             padding: 0 1rem;
@@ -404,16 +426,16 @@ main {
   .section_inner {
     &.sponsor_banner {
       padding: 3rem 0;
-
+      
       p {
         @include font(1.2rem, 600, #777);
         margin-bottom: 1rem;
         text-align: center;
       }
-
+      
       figure {
         width: auto;
-
+        
         img {
           display: block;
           margin: 0 auto;
