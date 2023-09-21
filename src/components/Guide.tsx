@@ -7,7 +7,7 @@ import imgs from "src/common/ImgDef";
 
 /* Import Component */
 import { JobItem } from "src/components/LatestList";
-import { CoursesItem } from "src/components/AvailCourses";
+// import { CoursesItem } from "src/components/AvailCourses";
 import SubBanner from "src/components/banner/SubBanner";
 import Button from "src/components/button/Button";
 import SponsorBanner from "src/components/banner/SponsorBanner";
@@ -140,7 +140,7 @@ const Guide: React.FC = () => {
       <div style={{ ...commonStyle, ...fontSize20 }}>
         [ 04.Available Courses List Item ]
       </div>
-      <CoursesItem courses={someCoursesData} />
+      {/* <CoursesItem courses={someCoursesData} /> */}
 
       {/* 05.button component */}
       <div style={{ ...commonStyle, ...fontSize20 }}>

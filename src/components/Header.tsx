@@ -42,7 +42,13 @@ const Header: React.FC = () => {
               </NavLink>
             </li>
             <li>
-              <a href="#none">Courses</a>
+              <NavLink
+                to="/Courses"
+                className={({ isActive }) => (isActive ? "active" : "")}
+                onClick={closeMenu}
+              >
+                Courses
+              </NavLink>
             </li>
             <li>
               <a href="#none">Contact Us</a>
