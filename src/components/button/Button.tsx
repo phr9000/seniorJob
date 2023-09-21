@@ -8,6 +8,7 @@ interface ButtonProps {
   disable?: boolean;
   additionalClass?: string;
   children?: React.ReactNode;
+  onClick?: ()=> void;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -16,6 +17,7 @@ const Button: React.FC<ButtonProps> = ({
   size = "md",
   icon,
   additionalClass,
+  onClick
 }) => {
   let colorClass: string;
   let sizeClass: string;
@@ -68,8 +70,15 @@ const Button: React.FC<ButtonProps> = ({
     .filter(Boolean)
     .join(" ");
 
+  const handleClick = () => {
+    console.log(onClick);
+    if(onClick) {
+      onClick();
+    }
+  };  
+
   return (
-    <button className={classList}>
+    <button className={classList} onClick={handleClick}>
       {icon && <i className={icon}></i>}
       {label}
     </button>
