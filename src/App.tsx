@@ -7,6 +7,8 @@ import Root from "src/pages/Root";
 import MainLayout from "src/pages/Main/MainLayout";
 import JobsLayout from "src/pages/Jobs/JobsLayout";
 import JobsDetail from "src/pages/Jobs/JobsDetail";
+import CoursesLayout from "src/pages/Courses/CoursesLayout";
+import CoursesDetail from "src/pages/Courses/CoursesDetail";
 import Guide from "src/components/Guide";
 import ContactUsLayout from "src/pages/ContactUs/ContactUsLayout";
 
@@ -27,7 +29,13 @@ const router = createBrowserRouter([
           {path: "JobsDetail", element: <JobsDetail/>},
         ],
       },
-      {path: "/ContactUs", element: <ContactUsLayout/>},
+      { path: "/Courses", element: <CoursesLayout /> },
+      {
+        path: "/Courses", // /Courses 아래에 Coursesdetail 추가
+        children: [
+          { path: "CoursesDetail", element: <CoursesDetail /> },
+        ],
+      },
     ],
   },
 ]);

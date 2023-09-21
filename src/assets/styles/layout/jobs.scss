@@ -28,14 +28,24 @@
     }
     .job-type-bage {
       display: inline-block;
-      padding: 0.5rem 0.8rem;
-      background-color: $green1;
+      padding: 0.5rem 2rem;
       text-align: center;
       font-weight: 500;
-      color: $green2;
+      
       border-radius: 2.5rem;
-      border: 1px solid $green1;
       font-size: 1.6rem;
+      &.basic {
+        color: $blue3;
+        border: 1px solid $blue3;
+      }
+      &.full {
+        color: $green2;
+        border: 1px solid $green1;
+        background-color: $green1;
+      }
+      + .job-type-bage {
+        margin-left: 1rem;
+      }
     }
     h2 {
       margin: 5px 0;

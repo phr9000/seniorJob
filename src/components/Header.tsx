@@ -2,6 +2,7 @@
 import {NavLink} from 'react-router-dom';
 import React, {useState} from "react";
 import Button from "src/components/button/Button";
+import PopupLayout from 'src/components/popup/Popup';
 
 
 
@@ -19,7 +20,8 @@ const Header: React.FC = () => {
   };
   
   return (
-    <header>
+    <>
+      <header>
       <div className="header-inner">
         <h1 className="logo">
           <NavLink to='/' onClick={closeMenu}>SILVERJOBS</NavLink>
@@ -45,7 +47,13 @@ const Header: React.FC = () => {
               </NavLink>
             </li>
             <li>
-              <a href="#none">Courses</a>
+              <NavLink
+                to="/Courses"
+                className={({ isActive }) => (isActive ? "active" : "")}
+                onClick={closeMenu}
+              >
+                Courses
+              </NavLink>
             </li>
             <li>
               <NavLink
@@ -72,7 +80,10 @@ const Header: React.FC = () => {
           ></i>
         </div>
       </div>
-    </header>
+      </header>
+      <PopupLayout/>
+    </>
+    
   );
 };
 
