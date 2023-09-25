@@ -1,11 +1,8 @@
 /* eslint-disable */
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 /* 이미지 가져오기 */
-import imgs from 'src/common/ImgDef';
-
-/* SCSS 가져오기 */
-import "src/assets/styles/layout/availCourses.scss";
+import imgs from "src/common/ImgDef";
 
 /* 컴포넌트 가져오기 */
 import { BigBtn, SecTitle, SecTitleDesc } from "src/components/Guide";
@@ -59,11 +56,15 @@ const coursesList = [
 ];
 
 export const CoursesItem: React.FC<{
-  courses: typeof coursesList[0];
+  courses: (typeof coursesList)[0];
   closeMenu: () => void;
 }> = ({ courses, closeMenu }) => (
   <li className="sec_list">
-    <NavLink to="/Courses/CoursesDetail" className="add_links flex" onClick={closeMenu}>
+    <NavLink
+      to="/Courses/CoursesDetail"
+      className="add_links flex"
+      onClick={closeMenu}
+    >
       <div className="text_area">
         <div className="row flex justify-between">
           <span className="posted_on">
@@ -72,7 +73,10 @@ export const CoursesItem: React.FC<{
           </span>
           <div className="time_type row flex items-center">
             {courses.timeTypes.map(({ type, icon }) => (
-              <p className={`timetype_${type.toLowerCase().replace(" ", "_")}`} key={type}>
+              <p
+                className={`timetype_${type.toLowerCase().replace(" ", "_")}`}
+                key={type}
+              >
                 <i className={icon}></i>
                 &nbsp;&nbsp;{type}
               </p>
@@ -105,11 +109,15 @@ export const CoursesItem: React.FC<{
             <h3 className="courses_tit mo_ver">{courses.title}</h3>
             <div className="row salary_area_avail">
               <div>
-                <div className="salary"><span className="data_salary">{courses.salary}</span></div>
+                <div className="salary">
+                  <span className="data_salary">{courses.salary}</span>
+                </div>
                 <div className="salperiod">{courses.fullFee}</div>
               </div>
               <div>
-                <div className="salary"><span className="data_salary">{courses.salary2}</span></div>
+                <div className="salary">
+                  <span className="data_salary">{courses.salary2}</span>
+                </div>
                 <div className="salperiod">{courses.nettlFee}</div>
               </div>
             </div>
@@ -121,7 +129,7 @@ export const CoursesItem: React.FC<{
 );
 
 const margin = {
-  marginTop: '10rem',
+  marginTop: "10rem",
 };
 const AvailCourses: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -132,12 +140,14 @@ const AvailCourses: React.FC = () => {
   return (
     <div className="section_inner">
       <SecTitle title="사용 가능한 강의" />
-      <SecTitleDesc
-        desc="진로를 나아가기 위한 다양한 강의를 제공합니다. 적합한 강의에 지금 등록하세요."
-      />
+      <SecTitleDesc desc="진로를 나아가기 위한 다양한 강의를 제공합니다. 적합한 강의에 지금 등록하세요." />
       <ul className="sec_cont">
         {coursesList.map((courses) => (
-          <CoursesItem courses={courses} key={courses.title} closeMenu={closeMenu} />
+          <CoursesItem
+            courses={courses}
+            key={courses.title}
+            closeMenu={closeMenu}
+          />
         ))}
       </ul>
 

@@ -1,8 +1,7 @@
 /* eslint-disable */
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import imgs from "src/common/ImgDef";
-import "src/assets/styles/layout/latestList.scss";
 import { SecTitle } from "src/components/Guide";
 import { BigBtn } from "src/components/Guide";
 
@@ -43,11 +42,15 @@ const jobList = [
 ];
 
 export const JobItem: React.FC<{
-  job: typeof jobList[0];
+  job: (typeof jobList)[0];
   closeMenu: () => void;
 }> = ({ job, closeMenu }) => (
   <li className="sec_list">
-    <NavLink to="/Jobs/JobsDetail" className="add_links flex" onClick={closeMenu}>
+    <NavLink
+      to="/Jobs/JobsDetail"
+      className="add_links flex"
+      onClick={closeMenu}
+    >
       <div className="thumb_area shrink-0">
         <img src={job.thumb} alt="" />
       </div>
@@ -59,7 +62,10 @@ export const JobItem: React.FC<{
           </span>
           <div className="time_type row flex items-center">
             {job.jobTypes.map((type) => (
-              <p className={`jobtype_${type.toLowerCase().replace(" ", "_")}`} key={type}>
+              <p
+                className={`jobtype_${type.toLowerCase().replace(" ", "_")}`}
+                key={type}
+              >
                 <i className="far fa-clock"></i>
                 &nbsp;&nbsp;{type}
               </p>
@@ -91,7 +97,9 @@ export const JobItem: React.FC<{
             </ul>
             <h3 className="job_tit mo_ver">{job.title}</h3>
             <div className="row salary_area">
-              <div className="salary">UP TO <span className="data_salary">{job.salary}</span></div>
+              <div className="salary">
+                UP TO <span className="data_salary">{job.salary}</span>
+              </div>
               <div className="salperiod">{job.period}</div>
             </div>
           </div>

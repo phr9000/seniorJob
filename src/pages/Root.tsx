@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 
 import "src/assets/styles/index.scss";
-import "src/assets/styles/index.scss";
 import "src/assets/fontawesome/css/fontawesome.css";
 import "src/assets/fontawesome/css/brands.css";
 import "src/assets/fontawesome/css/solid.css";

@@ -1,9 +1,6 @@
 /* eslint-disable */
 import React, { useState } from "react";
 
-/* Import SCSS */
-import "src/assets/styles/layout/selectBoxChk.scss";
-
 // SelectBoxChkProps 인터페이스 정의
 interface SelectBoxChkProps {
   isOpen: boolean;
