@@ -11,47 +11,48 @@ const coursesList = [
   {
     postedOn: "",
     timeTypes: [
-      { type: "기본", icon: "fas fa-certificate" },
-      { type: "풀 타임", icon: "fas fa-hourglass-half" },
+      { type: "Basic", icon: "fas fa-certificate" },
+      { type: "Full Time", icon: "fas fa-hourglass-half" },
     ],
-    title: "노인 간병 기술 기초 (중국어)",
-    day: "2일",
-    location: "보조금/지원금: 스킬퓨처 크레딧, NSA 지원금",
-    calendar: "부터",
+    title: "Basics of Elder Caregiving Skills (Mandarin)",
+    day: "2 Days",
+    location: "Grant/Subsidies: SkillsFuture Credit,NSA Subsidy",
+    calendar: "From to",
     salary: "$450",
     salary2: "$40",
-    fullFee: "전액 비용",
-    nettlFee: "순수 비용",
+    fullFee: "FULL FEE",
+    nettlFee: "NETT FEE",
   },
   {
     postedOn: "",
     timeTypes: [
-      { type: "기본", icon: "fas fa-certificate" },
-      { type: "풀 타임", icon: "fas fa-hourglass-half" },
+      { type: "Basic", icon: "fas fa-certificate" },
+      { type: "Full Time", icon: "fas fa-hourglass-half" },
     ],
-    title: "기업가정신: 비즈니스 모델 구축 및 승리적인 피치 제공",
-    day: "1일",
-    location: "보조금/지원금: 스킬퓨처 크레딧, NSA 지원금",
-    calendar: "부터 2023년 6월 22일부터 2023년 6월 23일까지",
+    title:
+      "Entrepreneurship: Build your Business Model and Deliver a Winning Pitch",
+    day: "1 Days",
+    location: "Grant/Subsidies: SkillsFuture Credit,NSA Subsidy",
+    calendar: "From 22-Jun-2023 to 23-Jun-2023",
     salary: "$150",
     salary2: "$96",
-    fullFee: "전액 비용",
-    nettlFee: "순수 비용",
+    fullFee: "FULL FEE",
+    nettlFee: "NETT FEE",
   },
   {
     postedOn: "",
     timeTypes: [
-      { type: "기본", icon: "fas fa-certificate" },
-      { type: "풀 타임", icon: "fas fa-hourglass-half" },
+      { type: "Basic", icon: "fas fa-certificate" },
+      { type: "Full Time", icon: "fas fa-hourglass-half" },
     ],
-    title: "친구들을 위한 훈련 (영어)",
-    day: "1일",
-    location: "보조금/지원금: 스킬퓨처 크레딧, NSA 지원금",
-    calendar: "부터 2023년 6월 8일부터 2023년 6월 8일까지",
+    title: "Training For Befrienders (English)",
+    day: "1 Days",
+    location: "Grant/Subsidies: SkillsFuture Credit,NSA Subsidy",
+    calendar: "From 08-Jun-2023 to 08-Jun-2023",
     salary: "$150",
     salary2: "$30",
-    fullFee: "전액 비용",
-    nettlFee: "순수 비용",
+    fullFee: "FULL FEE",
+    nettlFee: "NETT FEE",
   },
 ];
 
@@ -69,7 +70,7 @@ export const CoursesItem: React.FC<{
         <div className="row flex justify-between">
           <span className="posted_on">
             <i className="fas fa-pencil-alt"></i>
-            &nbsp;&nbsp;{courses.postedOn}에 게시됨
+            &nbsp;&nbsp;Posted on {courses.postedOn}
           </span>
           <div className="time_type row flex items-center">
             {courses.timeTypes.map(({ type, icon }) => (
@@ -139,8 +140,8 @@ const AvailCourses: React.FC = () => {
   };
   return (
     <div className="section_inner">
-      <SecTitle title="사용 가능한 강의" />
-      <SecTitleDesc desc="진로를 나아가기 위한 다양한 강의를 제공합니다. 적합한 강의에 지금 등록하세요." />
+      <SecTitle title="Available Courses" />
+      <SecTitleDesc desc="We offer a variety of courses to help you advance in your career. Enrol now into a suitable course." />
       <ul className="sec_cont">
         {coursesList.map((courses) => (
           <CoursesItem
