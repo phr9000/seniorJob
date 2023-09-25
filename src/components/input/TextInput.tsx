@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "src/assets/styles/base/input.scss";
 interface InputExampleProps {
   inputClassName?: "pink";
   value?: string | "";
