@@ -6,7 +6,7 @@ interface PopupLayoutProps {
     closePopup: () => void;
 }
 
-const PopupLayout: React.FC<PopupLayoutProps> = ({isPopup, closePopup}) => {
+const ResumePopup: React.FC<PopupLayoutProps> = ({isPopup, closePopup}) => {
     const [showPopup, setShowPopup] = useState(isPopup);
 
     const dimClick = () => {
@@ -25,13 +25,15 @@ const PopupLayout: React.FC<PopupLayoutProps> = ({isPopup, closePopup}) => {
           </div>
         )}
         {showPopup && (
-          <div className="popup-container">
+          <div className="popup-container resume">
             {/* 팝업 컨테이너 내용 */}
             poup
-            <button onClick={closePopup}>닫기</button>
+            <button onClick={closePopup}>
+              <i className="fa-solid fa-xmark"></i>
+            </button>
           </div>
         )}
       </>
     );
   };
-export default PopupLayout;
+export default ResumePopup;

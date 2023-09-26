@@ -2,7 +2,7 @@
 import { NavLink } from "react-router-dom";
 import React, { useState } from "react";
 import Button from "src/components/button/Button";
-import PopupLayout from "src/components/popup/Popup";
+import ResumePopup from "src/components/popup/resumePopup";
 
 const Header: React.FC = () => {
   // dropdown
@@ -16,16 +16,17 @@ const Header: React.FC = () => {
     setIsMenuOpen(false);
   };
 
-  // Popup 관련
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  //시작 Resume Popup
+  const [isResumePopupOpen, setIsResumePopupOpen] = useState(false);
 
-  const openPopup = () => { 
-    setIsPopupOpen(true);
+  const ResumeOpenPopup = () => { 
+    setIsResumePopupOpen(true);
   };
 
   const closePopup = () => {
-    setIsPopupOpen(false);
+    setIsResumePopupOpen(false);
   };
+  //끝 Resume Popup
 
   return (
     <>
@@ -79,7 +80,7 @@ const Header: React.FC = () => {
               label="Resume Drop Off"
               color="red-line"
               additionalClass="ml-6"
-              onClick={openPopup}
+              onClick={ResumeOpenPopup}
             />
             <Button label="Search Candidate" additionalClass="ml-8" />
             <Button
@@ -98,7 +99,7 @@ const Header: React.FC = () => {
           </div>
         </div>
       </header>
-      <PopupLayout isPopup={isPopupOpen} closePopup={closePopup}/>
+      <ResumePopup isPopup={isResumePopupOpen} closePopup={closePopup}/>
     </>
   );
 };
