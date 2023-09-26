@@ -16,6 +16,17 @@ const Header: React.FC = () => {
     setIsMenuOpen(false);
   };
 
+  // Popup 관련
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const openPopup = () => { 
+    setIsPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
+
   return (
     <>
       <header>
@@ -68,6 +79,7 @@ const Header: React.FC = () => {
               label="Resume Drop Off"
               color="red-line"
               additionalClass="ml-6"
+              onClick={openPopup}
             />
             <Button label="Search Candidate" additionalClass="ml-8" />
             <Button
@@ -86,7 +98,7 @@ const Header: React.FC = () => {
           </div>
         </div>
       </header>
-      {/* <PopupLayout/> */}
+      <PopupLayout isPopup={isPopupOpen} closePopup={closePopup}/>
     </>
   );
 };
