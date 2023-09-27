@@ -14,6 +14,7 @@ import SponsorBanner from "src/components/banner/SponsorBanner";
 import SelectBoxChk from "src/components/select/SelectBoxChk";
 import SelectBoxBasic from "src/components/select/SelectBoxBasic";
 import Input from "./input/TextInput";
+import Checkbox from "./input/Checkbox";
 
 interface SecTitleProps {
   /**
@@ -177,6 +178,10 @@ const Guide: React.FC = () => {
       {/* 09.Input Basic Style */}
       <div style={{ ...commonStyle, ...fontSize20 }}>[ 10.InputBasic ]</div>
       <Input placeholder="test" />
+
+      {/* 10.Checkbox Basic Style */}
+      <div style={{ ...commonStyle, ...fontSize20 }}>[ 11.ChekboxBasic ]</div>
+      <Checkbox/>
     </div>
   );
 };
