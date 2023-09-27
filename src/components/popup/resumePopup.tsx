@@ -65,6 +65,13 @@ const ResumePopup: React.FC<PopupLayoutProps> = ({isPopup, closePopup}) => {
                 label="&nbsp;&nbsp;Upload Resume"
                 icon="fa-solid fa-upload"
               />
+              <Button
+                color="primary-fill"
+                size="full"
+                label="Create Account & Send Resume&nbsp;&nbsp;"
+                icon="fa-solid fa-arrow-right"
+                additionalClass="reverse j-mt-20"
+              />
             </div>
           </div>
         )}

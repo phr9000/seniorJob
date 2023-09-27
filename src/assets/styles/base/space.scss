@@ -8,6 +8,16 @@
   }
 }
 
+// margin top
+.j-mt {
+  &-10 {
+    margin-top: 1rem;
+  }
+  &-20 {
+    margin-top: 2rem;
+  }
+}
+
 // margin bottom
 .j-mb {
   &-10 {
