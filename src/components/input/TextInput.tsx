@@ -3,12 +3,16 @@ interface InputExampleProps {
   inputClassName?: "pink";
   value?: string | "";
   placeholder?: string;
+  icon?: string;
+  type? :string;
 }
 
 const InputExample: React.FC<InputExampleProps> = ({
   inputClassName = "input",
   value = "",
   placeholder,
+  icon,
+  type="text"
 }) => {
   let [isInputClicked, setIsInputClicked] = useState(false);
   const [inputValue, setInputValue] = useState(value);
@@ -19,8 +23,9 @@ const InputExample: React.FC<InputExampleProps> = ({
 
   return (
     <div>
+      {icon && <i className={icon}></i>}
       <input
-        type="text"
+        type={type}
         value={inputValue}
         className={inputClassName}
         placeholder={isInputClicked === true ? "" : placeholder}

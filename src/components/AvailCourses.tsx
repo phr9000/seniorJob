@@ -152,7 +152,7 @@ const AvailCourses: React.FC = () => {
         ))}
       </ul>
 
-      <BigBtn title="모든 강의 보기" />
+      <BigBtn title="View All Courses" />
     </div>
   );
 };

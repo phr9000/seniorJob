@@ -5,7 +5,7 @@
     z-index: 800;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.4);
 }
 .popup-container {
     position: fixed;
@@ -13,7 +13,86 @@
     left: 50%;
     z-index: 999;
     transform: translate(-50%, -50%);
-    width: 450px;
-    height: 450px;
-    border: 1px solid red; 
+    padding: 3rem;
+    width: 60rem;
+    background-color: $white;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out, -o-transform 0.3s ease-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 0.6rem;
+    .close-btn {
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        color: $blue1;
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+    .__header {
+        height: 2rem; 
+    }
+    // Resume 
+    &.resume {
+        .upload-img {
+            width: 20rem;
+            & > img {
+                width: 100%;
+            }
+        }
+        h3 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 2.6rem;
+            font-weight: 600;
+        }
+        .title-desc {
+            margin-bottom: 1rem; 
+            font-size: 1.6rem;
+            color: $black1;
+        }
+        .form-area {
+            position: relative;
+            margin-bottom: 2rem;
+            & > div {
+                width: 100%;
+            }
+            &.mobile {
+                input {
+                    border-top-left-radius: 0rem;
+                    border-bottom-left-radius: 0rem;
+                }
+            }
+            &.password {
+                input {
+                    padding-right: 4rem;
+                }
+                .fa-eye {
+                    position: absolute;
+                    top: 50%;
+                    right: 1.6rem;
+                    z-index: 2;
+                    transform: translate(0%, -50%);
+                    font-size: 1.6rem;
+                    cursor: pointer;
+                    color: $red1;
+                }
+            }
+        }
+        .mobile-addon {
+            padding: 1rem 1.6rem;
+            font-size: 1.6rem;
+            border: 1px solid #ccc;
+            color: #555;
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+            border-right: none;
+        }
+    }
+}
+// table size
+@media (#{$pc-small}) {
+    .popup-container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
 }
