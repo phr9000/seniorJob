@@ -128,27 +128,40 @@ const LoginSignPopup: React.FC<PopupLayoutProps> = ({isPopup, closePopup}) => {
               <div className="body-content">
                 {/* login */}
                 <div id="login" className="tab-content" style={{ display: 'block' }}>
-                    login contents
+                    <p>login contents</p>
+                    {/* check terms */}
+                    <div className="checkbox-area j-mt-10">
+                        <input type="checkbox" id="rememberMe"/>
+                        <label htmlFor="rememberMe">
+                        <span className="checkbox"></span>
+                        <span className="txt">Remember Me</span>
+                        </label>
+                    </div>
+                    <Button
+                        color="primary-fill"
+                        size="full"
+                        label="Login"
+                        additionalClass="j-mt-20"
+                    />
                 </div>
                 {/* sign up */}
                 <div id="signUp" className="tab-content" style={{ display: 'none' }}>
-                    sign up contents
+                    <p>sign up contents</p>
+                    {/* check terms */}
+                    <div className="checkbox-area j-mt-10">
+                        <input type="checkbox" id="agree"/>
+                        <label htmlFor="agree">
+                        <span className="checkbox"></span>
+                        <span className="txt">By signing up, you agree to our <a href="#none" className="blue-color font-black">Terms & Conditions</a> and for CFS to contact you for future opportunities</span>
+                        </label>
+                    </div>
+                    <Button
+                        color="primary-fill"
+                        size="full"
+                        label="Sign Up"
+                        additionalClass="j-mt-20"
+                    />
                 </div>
-                {/* check terms */}
-                <div className="checkbox-area j-mt-10">
-                    <input type="checkbox" id="agree"/>
-                    <label htmlFor="agree">
-                    <span className="checkbox"></span>
-                    <span className="txt">By signing up, you agree to our <a href="#none" className="blue-color font-black">Terms & Conditions</a> and for CFS to contact you for future opportunities</span>
-                    </label>
-                </div>
-                <Button
-                    color="primary-fill"
-                    size="full"
-                    label="Create Account & Send Resume&nbsp;&nbsp;"
-                    icon="fa-solid fa-arrow-right"
-                    additionalClass="reverse j-mt-20"
-                />
               </div>
             </div>
           </div>
