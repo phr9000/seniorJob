@@ -17,6 +17,7 @@ import need_help06 from "src/assets/imgs/need_help06.jpg"; // need help
 import need_help07 from "src/assets/imgs/need_help07.jpg"; // need help
 import need_help08 from "src/assets/imgs/need_help08.jpg"; // need help
 import resume_upload from "src/assets/imgs/icon-resume-upload.png";
+import life_work from "src/assets/imgs/cfs_lifework.png";
 // ..추가가능
 
 
@@ -33,8 +34,7 @@ const imgs = {
   need_help06: need_help06,
   need_help07: need_help07,
   need_help08: need_help08,
-  resume_upload: resume_upload
-  
-  
+  resume_upload: resume_upload,
+  life_work: life_work
 }
 export default imgs;
