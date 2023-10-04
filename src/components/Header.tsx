@@ -2,7 +2,7 @@
 import { NavLink } from "react-router-dom";
 import React, { useState } from "react";
 import Button from "src/components/button/Button";
-import ResumePopup from "src/components/popup/resumePopup";
+import ResumePopup from "src/components/popup/ResumePopup";
 
 const Header: React.FC = () => {
   // dropdown

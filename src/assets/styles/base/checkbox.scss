@@ -1,3 +1,45 @@
 .checkbox-area {
-    
+    display: inline-flex;
+    align-items: flex-start;
+    position: relative;
+    font-size: 1.6rem;
+    input[type="checkbox"] {
+        display: none;
+        &:checked {
+            + label {
+                .checkbox {
+                    background-color: #3428c9;
+                    border-color: #3428c9;
+                    &:before {
+                        display: block;
+                        content: '';
+                        position: absolute;
+                        top: 2px;
+                        left: 8px;
+                        width: 6px;
+                        height: 14px;
+                        border-width: 0 2px 2px 0;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+    label {
+        display: inline-flex;
+        cursor: pointer;
+        span {
+            display: inline-block;
+        }
+        .checkbox {
+            position: relative;
+            margin-right: 9px;
+            min-width: 2.6rem;
+            width: 2.6rem;
+            min-height: 2.6rem;
+            height: 2.6rem;
+            border: 2px solid #ccc;
+            border-radius: 3px;
+        }
+    }
 }
