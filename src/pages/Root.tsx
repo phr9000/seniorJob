@@ -25,7 +25,7 @@ const Root: React.FC = () => {
   };
 
   useEffect(() => {
-    if (location.pathname === "/Jobs/JobsDetail") {
+    if (location.pathname === "/Jobs/JobsDetail" || location.pathname === "/Courses/CoursesDetail") {
       checkIsTabletWidth();
       window.addEventListener("resize", checkIsTabletWidth);
 
@@ -37,7 +37,7 @@ const Root: React.FC = () => {
   }, [location.pathname]); // location.pathname만을 의존성으로 설정
 
   // 특정 route에서만 footer에 padding-bottom을 추가하도록 설정
-  const isTabletRoute = location.pathname === "/Jobs/JobsDetail"; // 특정 route를 지정
+  const isTabletRoute = location.pathname === "/Jobs/JobsDetail" ||  location.pathname === "/Courses/CoursesDetail"; // 특정 route를 지정
   const footerStyle = {
     paddingBottom: isTabletRoute && isTabletWidth ? "44px" : "0",
   };

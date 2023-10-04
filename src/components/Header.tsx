@@ -2,7 +2,8 @@
 import { NavLink } from "react-router-dom";
 import React, { useState } from "react";
 import Button from "src/components/button/Button";
-import ResumePopup from "src/components/popup/resumePopup";
+import ResumePopup from "src/components/popup/ResumePopup";
+import LoginSignupPopup from "src/components/popup/LoginSignupPopup";
 
 const Header: React.FC = () => {
   // dropdown
@@ -25,8 +26,16 @@ const Header: React.FC = () => {
 
   const closePopup = () => {
     setIsResumePopupOpen(false);
+    setIsLoginPopupOpen(false);
   };
   //끝 Resume Popup
+
+  //시작 Login Popup
+  const [isLoginPopupOpen, setIsLoginPopupOpen] = useState(false);
+  const LoginOpenPopup = () => { 
+    setIsLoginPopupOpen(true);
+  };
+  //끝 Login Popup
 
   return (
     <>
@@ -87,6 +96,7 @@ const Header: React.FC = () => {
               label="Login / Sign Up"
               color="primary-fill"
               additionalClass="ml-8"
+              onClick={LoginOpenPopup}
             />
             <Button label="KO/EN" color="red-fill" additionalClass="ml-8" />
           </div>
@@ -100,6 +110,7 @@ const Header: React.FC = () => {
         </div>
       </header>
       <ResumePopup isPopup={isResumePopupOpen} closePopup={closePopup}/>
+      <LoginSignupPopup isPopup={isLoginPopupOpen} closePopup={closePopup}/>
     </>
   );
 };
