@@ -1,0 +1,16 @@
+@import "src/assets/styles/abstracts/mixin";
+@import "src/assets/styles/abstracts/variables";
+
+.contactus_layout_container {
+  .section_inner {
+    @include flex(flex, center);
+    
+    > div {
+      width: calc(100% / 2);
+    }
+    
+    .sec_title {
+      text-align: left;
+    }
+  }
+}
