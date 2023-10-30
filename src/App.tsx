@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 import "src/App.css";
 
@@ -13,29 +13,33 @@ import CoursesDetail from "src/pages/Courses/CoursesDetail";
 import Guide from "src/components/Guide";
 import ContactUsLayout from "src/pages/ContactUs/ContactUsLayout";
 
+
+
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <Root/>,
     children: [
-      { index: true, element: <MainLayout /> },
-      { path: "/guide", element: <Guide /> },
-      { path: "/Jobs", element: <JobsLayout /> },
+      {index: true, element: <MainLayout/>},
+      {path: "/guide", element: <Guide/>},
+      {path: "/Jobs", element: <JobsLayout/>},
       {
         path: "/Jobs", // /jobs 아래에 jobsdetail 추가
-        children: [{ path: "JobsDetail", element: <JobsDetail /> }],
+        children: [ {path: "JobsDetail", element: <JobsDetail/>} ],
       },
-      { path: "/Courses", element: <CoursesLayout /> },
+      {path: "/Courses", element: <CoursesLayout/>},
       {
         path: "/Courses", // /Courses 아래에 Coursesdetail 추가
-        children: [{ path: "CoursesDetail", element: <CoursesDetail /> }],
+        children: [ {path: "CoursesDetail", element: <CoursesDetail/>} ],
       },
+      {path: "/ContactUs", element: <ContactUsLayout/>},
     ],
   },
 ]);
 
 const App: React.FC = () => {
-  return <RouterProvider router={router} />;
+  return <RouterProvider router={router}/>;
 };
 
 export default App;
