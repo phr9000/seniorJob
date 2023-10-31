@@ -1,8 +1,8 @@
 /* eslint-disable */
 import React, {useState} from "react";
+import {NavLink} from "react-router-dom";
 
 import imgs from "src/common/ImgDef";
-import SearchBox from "src/pages/Main/searchbox/SearchBox";
 import {SecTitle} from "src/components/Guide";
 
 
@@ -11,8 +11,23 @@ import {SecTitle} from "src/components/Guide";
 const ContactUsLayout: React.FC = () => {
   return (
     <main className="main-container contactus_layout_container">
-      <section className="search-box-container active">
-        <SearchBox/>
+      <div className="sub_nav_bar">
+        <div className="nav_inner">
+          <ul>
+            <li className="nav_item">
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li className="nav_item">
+              <span className="slash">/</span>
+            </li>
+            <li className="nav_item">
+              <span>Contact Us</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <section className="contact_banner">
+        <h3>Contact Us</h3>
       </section>
       <section className="container sub-page">
         <div className="section_inner">
