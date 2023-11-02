@@ -3,6 +3,13 @@
 
 .contactus_layout_container {
   .sub_nav_bar {
+    @include tablet {
+      display: none;
+    }
+    @include mobile {
+      display: none;
+    }
+    
     .nav_inner {
       background-color: #f0f0f0;
       
@@ -11,6 +18,10 @@
         width: 1170px;
         margin: 0 auto;
         padding: 8px 15px;
+        
+        @include tablet_m {
+          width: 970px;
+        }
         
         li {
           a {
@@ -49,6 +60,15 @@
       @include font(20px, 600, #fff, 1.1);
       letter-spacing: 1px;
       font-family: 'Poppins', system-ui, Arial, sans-serif;
+      display: none;
+      
+      @include tablet {
+        display: block;
+      }
+      @include mobile {
+        display: block;
+      }
+      
     }
   }
   
