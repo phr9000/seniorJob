@@ -18,7 +18,7 @@
             color: #3428c9;
             
             &:hover {
-              color: ;
+              color: #337ab7;
             }
           }
           
@@ -42,8 +42,14 @@
     background-image: url("../../imgs/contactus_hero_banner.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    @include flex(flex, center, center);
     
+    h3 {
+      @include font(20px, 600, #fff, 1.1);
+      letter-spacing: 1px;
+      font-family: 'Poppins', system-ui, Arial, sans-serif;
+    }
   }
   
   .section_inner {
