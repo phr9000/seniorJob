@@ -38,7 +38,7 @@
             color: #777;
             
             &.slash {
-              padding: 0 5px;
+              padding: 0 0.5rem;
               color: #ccc;
             }
           }
@@ -72,15 +72,57 @@
     }
   }
   
+  .container {
+    &.pd_t30 {
+      padding-top: 3rem;
+    }
+  }
+  
   .section_inner {
     @include flex(flex, center);
     
     > div {
       width: calc(100% / 2);
+      padding: 0 4rem;
+      
+      &:not(:last-child) {
+        border-right: 1px solid #ccc;
+      }
+      
+      > p {
+        margin-bottom: 1rem;
+        @include font(16px, normal, #333);
+        line-height: 1.4;
+        letter-spacing: 0.5px;
+        
+        .indented {
+          padding-left: 1.5rem;
+        }
+        
+        .indented_tech {
+          padding-left: 2.1rem;
+        }
+        
+        a {
+          color: #3428c9;
+        }
+      }
+      
+      h4 {
+        @include font(18px, 600, #333);
+        letter-spacing: 0.5px;
+        margin: 1rem 0;
+      }
     }
     
     .sec_title {
       text-align: left;
+    }
+    
+    .headline {
+      @include font(16px, 600, #777);
+      margin: 2rem 0 1rem;
+      text-transform: uppercase;
     }
   }
 }
