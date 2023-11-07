@@ -9,6 +9,7 @@ import {SecTitle} from "src/components/Guide";
 
 
 const ContactUsLayout: React.FC = () => {
+  // @ts-ignore
   return (
     <main className="main-container contactus_layout_container">
       <div className="sub_nav_bar">
@@ -91,7 +92,36 @@ const ContactUsLayout: React.FC = () => {
               Do you have any questions that needs to be answered? Fill in the form and we will get back to you as soon
               as we can.
             </p>
-          
+            <div className="form_group">
+              <input className="form_control" type="text" name="name" placeholder="Name*" required/>
+            </div>
+            <div className="form_group">
+              <input className="form_control" type="email" name="email" placeholder="Email" required/>
+            </div>
+            <div className="form_group">
+              <input className="form_control" type="text" name="phone" placeholder="Phone Number" required/>
+            </div>
+            <div className="form_group">
+              <input className="form_control" type="text" name="subject" placeholder="Subject*" required/>
+            </div>
+            <div className="form_group">
+              <textarea name="message" className="form_control" placeholder="Message" rows={5}></textarea>
+            </div>
+            <div className="form_check">
+              <div className="control control__checkbox">
+                <label htmlFor="">
+                  <div className="control__indicator">
+                  
+                  </div>
+                  <input type="checkbox" id="chk_contact_terms" name="pdqa" value="1"/>
+                  By contacting us, you agree to our
+                  <a href="#none" target="_blank">
+                    Terms & Conditions
+                  </a>
+                  and for CFS to contact you for future openings
+                </label>
+              </div>
+            </div>
           </div>
         </div>
       </section>
