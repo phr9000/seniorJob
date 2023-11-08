@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import {NavLink} from "react-router-dom";
 
 import imgs from "src/common/ImgDef";
-import {SecTitle} from "src/components/Guide";
+import {BigBtn, SecTitle} from "src/components/Guide";
 
 
 
@@ -30,7 +30,7 @@ const ContactUsLayout: React.FC = () => {
       <section className="contact_banner">
         <h3>Contact Us</h3>
       </section>
-      <section className="container sub-page pd_t30">
+      <section className="container sub-page pd_t30 pd_bt30">
         <div className="section_inner">
           <div className="left_area">
             <SecTitle title="General Information"/>
@@ -71,7 +71,7 @@ const ContactUsLayout: React.FC = () => {
             <p>Alight at Bishan MRT Station</p>
             <br/>
             <h4>
-              <i className="fas fa-train"></i>
+              <i className="fas fa-bus"></i>
               &nbsp;&nbsp;By Bus
             </h4>
             <p>Buses: 52,53,54,55,56,57,58,59, 410W/G. Alight at Bishan Bus<br/>
@@ -79,12 +79,23 @@ const ContactUsLayout: React.FC = () => {
             </p>
             <br/>
             <h4>
-              <i className="fas fa-train"></i>
+              <i className="fas fa-car"></i>
               &nbsp;&nbsp;By Car
             </h4>
             <p>Parking is available at the URA Carpark next to the Bishan Bus<br/>
               Interchange at Blk 513, Bishan St 13.
             </p>
+            <br/>
+            <div className="map_area">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7977.421393426563!2d103.848646!3d1.350104!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da17169de27aff%3A0x9c4ac8aa7e698d7d!2sCentre%20For%20Seniors%20(CFS)!5e0!3m2!1sen!2sph!4v1699417713299!5m2!1sen!2sph"
+                width="600"
+                height="450"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                style={{border: 0}}
+              ></iframe>
+            </div>
           </div>
           <div className="right_area">
             <SecTitle title="Send Us a Message"/>
@@ -104,23 +115,27 @@ const ContactUsLayout: React.FC = () => {
             <div className="form_group">
               <input className="form_control" type="text" name="subject" placeholder="Subject*" required/>
             </div>
-            <div className="form_group">
+            <div className="form_group _textarea">
               <textarea name="message" className="form_control" placeholder="Message" rows={5}></textarea>
             </div>
             <div className="form_check">
               <div className="control control__checkbox">
-                <label htmlFor="">
-                  <div className="control__indicator">
-                  
-                  </div>
-                  <input type="checkbox" id="chk_contact_terms" name="pdqa" value="1"/>
+                <label htmlFor="agree" className="chk_box">
+                  <input
+                    type="checkbox"
+                    id="agree"
+                    className="hiddenCheckbox"
+                  />
+                  <span className="on"></span>
                   By contacting us, you agree to our
                   <a href="#none" target="_blank">
                     Terms & Conditions
-                  </a>
-                  and for CFS to contact you for future openings
+                  </a> and for CFS to contact you for future openings
                 </label>
               </div>
+            </div>
+            <div className="">
+              <BigBtn title="Send Message"/>
             </div>
           </div>
         </div>
