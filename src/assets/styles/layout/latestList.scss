@@ -8,8 +8,20 @@
 }
 
 .latestListComp {
+  width: 117rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  margin: 0 auto;
+  
+  @include tablet_m {
+    width: 990px;
+  }
+  @include tablet {
+    width: 768px;
+  }
+  @include mobile {
+    width: 100%;
+  }
 }
 
 .sec_cont {
@@ -94,7 +106,6 @@
         background-color: #ffd2b2;
         color: #a74500;
         
-        
         &:not(:last-child) {
           margin-right: 1rem;
         }
@@ -122,7 +133,6 @@
         border: 1px solid #a6ead2;
       }
       
-      
       .course_desc {
         @include flex(flex);
         flex-direction: column;
@@ -135,7 +145,6 @@
           color: $primary;
           word-wrap: break-word;
           line-height: 1.1;
-          
           
           @include desktop {
             &.mo_ver {

@@ -75,6 +75,8 @@
   }
   
   .container {
+    width: 117rem;
+    
     &.pd_t30 {
       padding-top: 3rem;
     }
@@ -85,6 +87,7 @@
   }
   
   .section_inner {
+    width: 100%;
     @include flex(flex, center);
     
     > div {

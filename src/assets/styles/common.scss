@@ -46,24 +46,30 @@ button {
 
 .container {
   margin: 0 auto;
-
+  
   @include mobile {
     max-width: 100% !important;
   }
 }
 
 .section_inner {
-  width: 1170px;
   margin: 0 auto;
-
+  // width: 1170px;
+  
+  @include desktop {
+    width: 100%;
+  }
+  
   @include tablet_m {
-    width: 940px;
+    // width: 940px;
+    width: 100%;
   }
-
+  
   @include tablet {
-    width: 720px;
+    // width: 720px;
+    width: 100%;
   }
-
+  
   @include mobile {
     width: 100%;
     padding: 0 1.5rem;
@@ -176,6 +182,7 @@ em {
 
 .hr {
   border-top: 1px solid #eeeeee;
+  
   &.gray {
     border-color: #ccc;
   }
