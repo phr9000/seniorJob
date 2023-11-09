@@ -70,12 +70,12 @@
       @include mobile {
         display: block;
       }
-      
     }
   }
   
   .container {
-    width: 117rem;
+    max-width: 100%;
+    // width: 100%;
     
     &.pd_t30 {
       padding-top: 3rem;

@@ -255,6 +255,16 @@ main {
     width: 117rem;
     margin: 0 auto;
     
+    @include tablet_m {
+      width: 990px;
+    }
+    @include tablet {
+      width: 768px;
+    }
+    @include mobile {
+      width: 100%;
+    }
+    
     &.sub-page {
       padding-top: 12rem;
     }
