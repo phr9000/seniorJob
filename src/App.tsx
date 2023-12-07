@@ -11,6 +11,8 @@ import JobsDetail from "src/pages/Jobs/JobsDetail";
 import CoursesLayout from "src/pages/Courses/CoursesLayout";
 import CoursesDetail from "src/pages/Courses/CoursesDetail";
 import Guide from "src/components/Guide";
+import MindLayout from "src/pages/Mind/MindLayout";
+
 import ContactUsLayout from "src/pages/ContactUs/ContactUsLayout";
 
 
@@ -33,9 +35,12 @@ const router = createBrowserRouter([
         path: "/Courses", // /Courses 아래에 Coursesdetail 추가
         children: [ {path: "CoursesDetail", element: <CoursesDetail/>} ],
       },
+
       {path: "/ContactUs", element: <ContactUsLayout/>},
+
     ],
   },
+  {path:"/mind", element: <MindLayout/>}
 ]);
 
 const App: React.FC = () => {
