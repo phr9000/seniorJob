@@ -87,6 +87,15 @@ const Header: React.FC = () => {
                   Contact Us
                 </NavLink>
               </li>
+              <li>
+              <NavLink
+                  to="/mind"
+                  className={({isActive}) => ( isActive ? "active" : "" )}
+                  onClick={closeMenu}
+                >
+                  mind
+                </NavLink>
+              </li>
             </ul>
             <Button
               label="Resume Drop Off"
